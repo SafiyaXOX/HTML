@@ -1,0 +1,36 @@
+/* Basic CSS for HTML Notes */
+body {
+
+    font-family: Arial, sans-serif;
+    /* Available CSS Fonts:
+    Serif fonts: Times New Roman, Georgia, Times, serif
+    Sans-serif fonts: Arial, Helvetica, Verdana, Tahoma, Geneva, sans-serif
+    Monospace fonts: Courier New, Courier, monospace, Consolas, Monaco
+    Cursive fonts: Brush Script MT, Lucida Handwriting, cursive
+    Fantasy fonts: Impact, Papyrus, fantasy
+    Generic families: serif, sans-serif, monospace, cursive, fantasy
+    */
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #ffffff;
+}
+
+.left-align {
+    text-align: left;
+}
+
+h1, h2 {
+    color: #333;
+    text-align: center;
+}
+
+
+p {
+    margin-bottom: 15px;
+    text-indent: 20px;
+}
+
+img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
