@@ -77,7 +77,7 @@
 </div>
  
 <!-- Lists in HTML -->
-<h2>Lists in HTML</h2>
+<h2>Lists</h2>
 <div>
     <p>
         HTML supports several types of lists that help organize content. The two primary types are unordered lists (bulleted lists) and ordered lists (numbered lists). Lists are helpful for structuring information clearly.
@@ -101,8 +101,66 @@
     <p>
         Use the <code>&lt;ul&gt;</code> tag for unordered lists and <code>&lt;ol&gt;</code> for ordered lists. Each list item goes inside a <code>&lt;li&gt;</code> tag.
     </p>
+    <!-- Nested Lists -->
+    <h3>Nested Lists</h3>
+    <p>
+        You can nest lists inside other lists to create sub-items. Here, we used an unordered list inside another unordered list. You can also mix ordered and unordered lists if needed.
+    </p>
+        <li>Fruits
+            <ul>
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Citrus
+                    <ul>
+                        <li>Orange</li>
+                        <li>Lemon</li>
+                        <li>Lime</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Vegetables
+            <ul>
+                <li>Carrot</li>
+                <li>Broccoli</li>
+            </ul>
+        </li>
+    </ul>
 </div>
 
+<!-- Tables in HTML -->
+<h2>Tables</h2>
+<div>
+    <p> <!-- Description of tables in HTML -->
+        Tables are used to display data in a structured format. We use the &lt;table&gt; tag to create a table.
+        The &lt;tr&gt; tag is used to create a table row.
+        The &lt;th&gt; tag is used to create a table header.
+        The &lt;td&gt; tag is used to create a table cell.
+    </p>
+    <table> <!-- Table Structure -->
+        <tr>
+            <!-- Table Header -->
+            <!-- colspan="5" means the header will span 5 columns -->
+            <th colspan="5" style="text-align: center;">HTML</th>
+        </tr>
+        <tr> 
+            <!-- Listing some advantages of HTML -->
+            <th>Advantages</th>
+            <td>Ease of Learning and Use</td>
+            <td>Universal Browser Compatibility</td>
+            <td>Integration with Other Technologies</td>
+            <td>Lightweight and Fast Loading</td>
+        </tr>
+        <tr> 
+            <!-- Listing some disadvanatges of HTML -->
+            <th>Disadvantages</th>
+            <td>Static Content</td>
+            <td>Lack of Dynamism</td>
+            <td>No Programming Capabilities</td>
+            <td>Complex Layouts</td>
+        </tr>
+    </table>
+</div>
 
 
 

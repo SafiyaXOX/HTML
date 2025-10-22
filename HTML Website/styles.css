@@ -38,15 +38,30 @@ body {
 h1, h2 {
     color: #000000;
     text-align: center;
+    font-family: "Consolas", monospace;
 }
 
 
 p {
     margin-bottom: 15px;
     text-indent: 20px;
+    font-family: "Geneva", sans-serif;
 }
 
 img {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-family: "Geneva", sans-serif;
+}
+
+table {
+    font-family: "Geneva", sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
 }
