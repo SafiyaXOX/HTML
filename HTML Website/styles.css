@@ -19,6 +19,10 @@ body {
     text-align: left;
 }
 
+.column-2 {
+    display: flex;
+}
+
 .header {
     padding: 50px;
     text-align: center;
@@ -34,6 +38,10 @@ body {
     flex: 1;
 }
 
+.tags {
+    color: #27AE60;
+    font-family: "Geneva", sans-serif;
+}
 
 h1, h2 {
     color: #000000;
@@ -65,3 +73,4 @@ td, th {
     text-align: left;
     padding: 8px;
 }
+

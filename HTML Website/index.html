@@ -38,11 +38,11 @@
         <br>
         The heaings go from h1 to h6.
         This text is written in what you call a paragraph.
-        Noted using &lt;p&gt; and &lt;/p&gt; tags."
-        <br><br>
+        Noted using <span class="tags">&lt;p&gt;</span> and <span class="tags">&lt;/p&gt;</span> tags."
+        <br>
         <!-- <br> represents a line break -->
         A line break is used to end a line and start a new one. 
-        Noted using &lt;br&gt; tag.
+        Noted using <span class="tags">&lt;br&gt;</span> tag.
         <br><br> 
         Below are the types of headings in HTML.
     </p>
@@ -76,66 +76,14 @@
 
 </div>
  
-<!-- Lists in HTML -->
-<h2>Lists</h2>
-<div>
-    <p>
-        HTML supports several types of lists that help organize content. The two primary types are unordered lists (bulleted lists) and ordered lists (numbered lists). Lists are helpful for structuring information clearly.
-    </p>
-
-    <!-- Unordered List -->
-    <h3>Unordered List</h3>
-    <ul>
-        <li>Item One</li>
-        <li>Item Two</li>
-        <li>Item Three</li>
-    </ul>
-
-    <!-- Ordered List -->
-    <h3>Ordered List</h3>
-    <ol>
-        <li>First Step</li>
-        <li>Second Step</li>
-        <li>Third Step</li>
-    </ol>
-    <p>
-        Use the <code>&lt;ul&gt;</code> tag for unordered lists and <code>&lt;ol&gt;</code> for ordered lists. Each list item goes inside a <code>&lt;li&gt;</code> tag.
-    </p>
-    <!-- Nested Lists -->
-    <h3>Nested Lists</h3>
-    <p>
-        You can nest lists inside other lists to create sub-items. Here, we used an unordered list inside another unordered list. You can also mix ordered and unordered lists if needed.
-    </p>
-        <li>Fruits
-            <ul>
-                <li>Apple</li>
-                <li>Banana</li>
-                <li>Citrus
-                    <ul>
-                        <li>Orange</li>
-                        <li>Lemon</li>
-                        <li>Lime</li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li>Vegetables
-            <ul>
-                <li>Carrot</li>
-                <li>Broccoli</li>
-            </ul>
-        </li>
-    </ul>
-</div>
-
 <!-- Tables in HTML -->
 <h2>Tables</h2>
 <div>
     <p> <!-- Description of tables in HTML -->
-        Tables are used to display data in a structured format. We use the &lt;table&gt; tag to create a table.
-        The &lt;tr&gt; tag is used to create a table row.
-        The &lt;th&gt; tag is used to create a table header.
-        The &lt;td&gt; tag is used to create a table cell.
+        Tables are used to display data in a structured format. We use the <span class="tags">&lt;table&gt;</span> tag to create a table.
+        The <span class="tags">&lt;tr&gt;</span> tag is used to create a table row.
+        The <span class="tags">&lt;th&gt;</span> tag is used to create a table header.
+        The <span class="tags">&lt;td&gt;</span> tag is used to create a table cell.
     </p>
     <table> <!-- Table Structure -->
         <tr>
@@ -162,6 +110,101 @@
     </table>
 </div>
 
+<!-- Lists in HTML -->
+<h2>Lists</h2>
+<div>
+    <p>
+        HTML supports several types of lists that help organize content. The two primary types are unordered lists (bulleted lists) and ordered lists (numbered lists). Lists are helpful for structuring information clearly.
+    </p>
+    <div class="column-2" style="justify-content: center; gap: 200px;">
+
+        <div>
+            <!-- Unordered List -->
+            <h3>Unordered List</h3>
+            <ul>
+                <li>Item One</li>
+                <li>Item Two</li>
+                <li>Item Three</li>
+            </ul>
+        </div>
+        <div>
+            <!-- Ordered List -->
+            <h3>Ordered List</h3>
+            <ol>
+                <li>First Step</li>
+                <li>Second Step</li>
+                <li>Third Step</li>
+            </ol>
+        </div>
+    </div>
+
+    <p>
+        Use the <code>&lt;ul&gt;</code> tag for unordered lists and <code>&lt;ol&gt;</code> for ordered lists. Each list item goes inside a <code>&lt;li&gt;</code> tag.
+    </p>
+    <!-- Nested Lists -->
+    <h3 style="text-align: center;">Nested Lists</h3>
+    <p>
+        You can nest lists inside other lists to create sub-items. Here, we used an unordered list inside another unordered list. You can also mix ordered and unordered lists if needed.
+    </p>
+        
+    <div class="column-2" style="justify-content: center; gap: 90px;">
+        <li>Fruits
+            <ul>
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Citrus
+                    <ul>
+                        <li>Orange</li>
+                        <li>Lemon</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Vegetables
+            <ul>
+                <li>Carrot</li>
+                <li>Broccoli</li>
+                <ol>
+                    <li>Item One</li>
+                    <li>Item Two</li>
+                    <li>Item Three</li>
+                </ol>
+            </ul>
+        </li>
+    </div>
+</div>
+
+<div>
+    <!-- URLs in HTML (Linking to other web pages) -->
+     <h2> URLs in HTML</h2>
+    <p> 
+        URLs are used to link to other web pages. We use the &lt;a&gt; tag to create a link.
+        This tag (<span class="tags">&lt;a&gt;</span>) has the following attributes:
+        <ul>
+            <li>href: Specifies the URL of the link</li>
+            <li>target: Specifies where to open the linked document</li>
+            <li>title: Specifies the title of the link</li>
+            <li>rel: Specifies the relationship between the current document and the linked document</li>
+            <li>type: Specifies the MIME type of the linked document. MIME stands for "Multipurpose Internet Mail Extensions".</li>
+            <li>charset: Specifies the character set of the linked document</li>
+            <li>name: Specifies the name of the link</li>
+            <li>rev: Specifies the reverse link of the link</li>
+        </ul>
+        Example:
+        <br>
+        Taking a link from this website directing you to Google.
+        <br>
+        <a href= "https://www.google.com" target="_blank">Click here to go to Google </a>
+    </p>
+</div>
+
+
+
+
+<div>
+    <!-- Form in HTML -->
+    <p></p>
+</div>
 
 
 
@@ -178,6 +221,8 @@
 <div>
     <p>Here are some helpful websites for learning HTML:</p>
     <ul>
+        <!-- "href" is the link to the website -->
+        <!-- "target="_blank"" opens the link in a new tab -->
         <li><a href="https://www.freecodecamp.org" target="_blank">FreeCodeCamp</a></li>
         <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
         <li><a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a></li>
