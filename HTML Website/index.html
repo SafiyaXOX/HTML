@@ -15,7 +15,7 @@
 
 <!-- Introduction to HTML -->
 <h2>Introduction to HTML</h2>
-<div>
+<div class="text">
     <!-- Paragraph Elements; Incorporating Line Indentation -->
     <p> HTML stands for HyperText Markup Language.
         HTML is the standard markup language for creating Web pages.
@@ -30,32 +30,27 @@
         HTML tags label pieces of content such as "heading", "paragraph", "table", and so on.
         Browsers do not display the HTML tags, but use them to render the content of the page.
     </p>
-</div>
-    
-<div>
+
     <!-- Headings in HTML -->
-    <p>HTML consists of headings
-        <br>
-        The heaings go from h1 to h6.
+    <p>
+        HTML consists of headings. The headings go from <span class="tags">&lt;h1&gt</span> to <span class="tags">&lt;h6&gt</span>.
         This text is written in what you call a paragraph.
         Noted using <span class="tags">&lt;p&gt;</span> and <span class="tags">&lt;/p&gt;</span> tags."
         <br>
         <!-- <br> represents a line break -->
-        A line break is used to end a line and start a new one. 
-        Noted using <span class="tags">&lt;br&gt;</span> tag.
+        The line breaks you see (ending a line and starting a new one) is noted using
+        <span class="tags">&lt;br&gt;</span> tag.
         <br><br> 
         Below are the types of headings in HTML.
-    </p>
+    
+        <!-- Heading Types 1-6 -->
+        <h1 class="left-align">This is an h1 heading.</h1>
+        <h2 class="left-align">This is an h2 heading.</h2>
+        <h3 class="left-align">This is an h3 heading.</h3>
+        <h4 class="left-align">This is an h4 heading.</h4>
+        <h5 class="left-align">This is an h5 heading.</h5>
+        <h6 class="left-align">This is an h6 heading.</h6>
 
-    <!-- Heading Types 1-6 -->
-    <h1 class="left-align">This is an h1 heading.</h1>
-    <h2 class="left-align">This is an h2 heading.</h2>
-    <h3 class="left-align">This is an h3 heading.</h3>
-    <h4 class="left-align">This is an h4 heading.</h4>
-    <h5 class="left-align">This is an h5 heading.</h5>
-    <h6 class="left-align">This is an h6 heading.</h6>
-
-    <p>
         So you can see that the headings decrease in size the closer 
         you get to h6; h1 being the largest size.
     </p>
@@ -71,14 +66,14 @@
         <img src="https://cdn.britannica.com/34/235834-050-C5843610/two-different-breeds-of-cats-side-by-side-outdoors-in-the-garden.jpg" 
         alt="Two Cute Cats" width="450" height="300">
         <!-- Figure Caption -->
-        <figcaption>Two Cute Cats</figcaption>
+        <figcaption><span style="font-style: italic;">Two Cute Cats</span></figcaption>
     </figure>
 
 </div>
  
 <!-- Tables in HTML -->
 <h2>Tables</h2>
-<div>
+<div class="text">
     <p> <!-- Description of tables in HTML -->
         Tables are used to display data in a structured format. We use the <span class="tags">&lt;table&gt;</span> tag to create a table.
         The <span class="tags">&lt;tr&gt;</span> tag is used to create a table row.
@@ -93,7 +88,7 @@
         </tr>
         <tr> 
             <!-- Listing some advantages of HTML -->
-            <th>Advantages</th>
+            <th style="font-style: italic;">Advantages</th>
             <td>Ease of Learning and Use</td>
             <td>Universal Browser Compatibility</td>
             <td>Integration with Other Technologies</td>
@@ -101,7 +96,7 @@
         </tr>
         <tr> 
             <!-- Listing some disadvanatges of HTML -->
-            <th>Disadvantages</th>
+            <th style="font-style: italic;">Disadvantages</th>
             <td>Static Content</td>
             <td>Lack of Dynamism</td>
             <td>No Programming Capabilities</td>
@@ -112,7 +107,7 @@
 
 <!-- Lists in HTML -->
 <h2>Lists</h2>
-<div>
+<div class="text">
     <p>
         HTML supports several types of lists that help organize content. The two primary types are unordered lists (bulleted lists) and ordered lists (numbered lists). Lists are helpful for structuring information clearly.
         <br><br>
@@ -179,9 +174,9 @@
     </div>
 </div>
 
-<div>
-    <!-- URLs in HTML (Linking to other web pages) -->
-     <h2> URLs in HTML</h2>
+<!-- URLs in HTML (Linking to other web pages) -->
+<h2> URLs in HTML</h2>
+<div class="text">
     <p> 
         URLs are used to link to other web pages. We use the <span class="tags">&lt;a&gt;</span> tag to create a link.
         This tag <span class="tags">&lt;a&gt;</span> has the following attributes:
@@ -203,10 +198,10 @@
     </p>
 </div>
 
-<div>
-    <!-- Form in HTML -->
-    <h2>Forms in HTML </h2>
+<!-- Form in HTML -->
+<h2>Forms in HTML </h2>
 
+<div class="text">
     <p>
         Forms are used in HTML to collect user input and send it to a server for processing. They enable interactive web pages. 
         <br>
@@ -307,15 +302,149 @@
 </div>
 
 
+<!-- IFrames in HTML-->
+<h2>IFrames</h2>
+<div class="text">
+    <h3 style="font-style: italic;">What is an IFrame?</h3>
+    <p>
+        An IFrame (Inline Frame) is n HTML element that embeds another HTML document inside the current page.
+        It creates a window within your page that displays content from another source.
+        <br><br>
+        We use the <span class="tags">&lt;iframe&gt;</span> tag to create an iframe.
+    </p>
+        <p><strong>Common Use Cases:</strong></p>
+    <ul>
+        <li><span class="bold_italic">Video Embedding-</span> Embedding YouTube, Vimeo, or other video content</li>
+        <li><span class="bold_italic">Maps-</span> Displaying Google Maps or other mapping services</li>
+        <li><span class="bold_italic">Social Media-</span> Embedding Twitter feeds, Facebook posts, Instagram content</li>
+        <li><span class="bold_italic">Documents-</span> Displaying PDFs or other documents</li>
+        <li><span class="bold_italic">Widgets-</span> Including interactive widgets from other websites</li>
+        <li><span class="bold_italic">Third-party Content-</span> Embedding content from external sources</li>
+    </ul>
+    
+    <p><strong>Common IFrame Attributes:</strong></p>
+    <ul>
+        <li><span class="bold_italic">src:</span> Specifies the URL of the page to embed</li>
+        <li><span class="bold_italic">width:</span> Sets the width of the iframe (in pixels or percentage)</li>
+        <li><span class="bold_italic">height:</span> Sets the height of the iframe (in pixels or percentage)</li>
+        <li><span class="bold_italic">title:</span> Provides a descriptive title for accessibility</li>
+        <li><span class="bold_italic">frameborder:</span> Controls the border around the iframe (0 = no border, 1 = border)</li>
+        <li><span class="bold_italic">allowfullscreen:</span> Allows the iframe content to enter fullscreen mode</li>
+        <li><span class="bold_italic">sandbox:</span> Applies security restrictions to the iframe content</li>
+    </ul>
+    <h3 style="text-align: center;">Example: Embedding a YouTube Video</h3>
+    <p>
+        Here's an example of embedding a YouTube video using an iframe:
+    </p>
+    
+    <div style="text-align: center; margin: 20px 0;">
+        <iframe 
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/jNQXAC9IVRw" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen
+            style="max-width: 100%; border-radius: 10px;">
+        </iframe>
+    </div>
+    
+    <p>
+        <strong>Code Breakdown:</strong>
+        <br>
+        The <span class="tags">&lt;iframe&gt;</span> tag above includes:
+        <ul>
+            <li><span class="bold_italic">src:</span> The URL of the YouTube video to embed</li>
+            <li><span class="bold_italic">width and height:</span> Dimensions of the video player</li>
+            <li><span class="bold_italic">title:</span> Descriptive text for screen readers</li>
+            <li><span class="bold_italic">allowfullscreen:</span> Enables fullscreen viewing</li>
+            <li><span class="bold_italic">allow:</span> Permissions for various features (autoplay, picture-in-picture, etc.)</li>
+        </ul>
+    </p>
+    
+    <h3 style="text-align: center;">Example: Embedding Google Maps</h3>
+    <p>
+        Here's an example of embedding a Google Map:
+    </p>
+    
+    <div style="text-align: center; margin: 20px 0;">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.184132576894!2d-73.98811768459398!3d40.75889597932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus" 
+            width="600" 
+            height="450" 
+            style="border:0; max-width: 100%; border-radius: 10px;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Google Maps - Times Square">
+        </iframe>
+    </div>
+    
+    <p>
+        <strong>Important Notes:</strong>
+        <ul>
+            <li>Some websites block embedding their content in iframes for security reasons (X-Frame-Options header)</li>
+            <li>Always include a <span class="bold_italic">title</span> attribute for accessibility</li>
+            <li>Use responsive design techniques (max-width: 100%) to make iframes work on mobile devices</li>
+            <li>The <span class="bold_italic">sandbox</span> attribute can restrict iframe capabilities for security</li>
+        </ul>
+    </p>
+</div>
 
 
+<!-- HTML Editor/Compiler -->
+<h2>Try It Yourself: HTML Editor</h2>
+<div class="text">
+    <p>
+        Practice writing HTML code below! Type your HTML code in the editor and click "Run" to see the output.
+        This is a great way to experiment with what you've learned.
+    </p>
+    
+    <div class="html-editor-container">
+        <div class="editor-header">
+            <h3 style="margin: 0; text-align: center;">HTML Editor</h3>
+        </div>
+        
+        <div class="editor-wrapper">
+            <div class="editor-section">
+                <label for="html-code" class="editor-label">Write your HTML code here:</label>
+                <textarea 
+                    id="html-code" 
+                    class="code-editor" 
+                    placeholder="Enter your HTML code here...&#10;&#10;Example:&#10;&lt;h1&gt;Hello World!&lt;/h1&gt;&#10;&lt;p&gt;This is my first HTML page.&lt;/p&gt;"
+                ></textarea>
+                <div class="editor-buttons">
+                    <button onclick="runCode()" class="button-run">Run Code</button>
+                    <button onclick="clearCode()" class="button-clear">Clear</button>
+                    <button onclick="loadExample()" class="button-example">Load Example</button>
+                </div>
+            </div>
+            
+            <div class="output-section">
+                <label class="editor-label">Output:</label>
+                <iframe id="output-frame" class="output-frame" title="HTML Output"></iframe>
+            </div>
+        </div>
+    </div>
+    
+    <p>
+        <strong>Tips:</strong>
+        <ul>
+            <li>Click "Run Code" to see your HTML rendered in the output area</li>
+            <li>Click "Clear" to clear both the editor and output</li>
+            <li>Click "Load Example" to see a sample HTML code</li>
+            <li>You can write complete HTML documents including CSS in &lt;style&gt; tags</li>
+        </ul>
+    </p>
+</div>
 
 
 
 
 
 <h2>Useful Resources</h2>
-<div>
+<div class="resource">
     <p>Here are some helpful websites for learning HTML:</p>
     <ul>
         <!-- "href" is the link to the website -->

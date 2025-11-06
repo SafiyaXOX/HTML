@@ -13,8 +13,10 @@ body {
     line-height: 1.6;
     margin: 20px;
     background-color: #ffffff;
+    color: #000000;
 }
 
+/* HTML Document Formating */
 .left-align {
     text-align: left;
 }
@@ -121,6 +123,22 @@ body {
     font-size: 16px;
 }
 
+.text{
+    padding: 15px;
+    background-color: #fcf5ba;
+    border-radius: 10px;
+    margin: auto;
+    border: 2px solid #000000;
+}
+
+.resource{
+    padding: 15px;
+    background-color: #daffaf;
+    border-radius: 10px;
+    margin: auto;
+    border: 2px solid #000000;
+}
+
 h1, h2 {
     color: #000000;
     text-align: center;
@@ -147,8 +165,145 @@ table {
 }
 
 td, th {
-    border: 1px solid #dddddd;
+    border: 1px solid #000000;
     text-align: left;
     padding: 8px;
 }
 
+/* HTML Editor Styles */
+.html-editor-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border: 2px solid #5d10c9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.editor-header {
+    background-color: #5d10c9;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.editor-wrapper {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.editor-section {
+    flex: 1;
+    min-width: 300px;
+}
+
+.output-section {
+    flex: 1;
+    min-width: 300px;
+}
+
+.editor-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #000000;
+}
+
+.code-editor {
+    width: 100%;
+    height: 400px;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: 14px;
+    background-color: #f8f8f8;
+    resize: vertical;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+.code-editor:focus {
+    outline: none;
+    border-color: #5d10c9;
+    background-color: #ffffff;
+}
+
+.output-frame {
+    width: 100%;
+    height: 400px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+.editor-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.button-run {
+    background-color: #27AE60;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.button-run:hover {
+    background-color: #229954;
+}
+
+.button-clear {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.button-clear:hover {
+    background-color: #c0392b;
+}
+
+.button-example {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.button-example:hover {
+    background-color: #2980b9;
+}
+
+@media (max-width: 768px) {
+    .editor-wrapper {
+        flex-direction: column;
+    }
+    
+    .code-editor,
+    .output-frame {
+        height: 300px;
+    }
+}
