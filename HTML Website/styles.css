@@ -29,6 +29,7 @@ body {
     background: #5d10c9;
     color: white;
     font-size: 30px;
+    border-radius: 20px;
     border: 3px solid black;
 }
 
@@ -39,8 +40,85 @@ body {
 }
 
 .tags {
+    background: #f0f4ff;
     color: #27AE60;
+    padding: 2px 6px;
+    border-radius: 5px;
     font-family: "Geneva", sans-serif;
+    font-weight: 550;
+    border: 1px solid #e0e7ff;
+}
+
+.bold_italic {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.list_container{
+    background: #f0f4ff;
+    color:#27AE60;
+    padding: 10px 15px 10px 25px;
+    font-weight: 550;
+    border-radius: 15px;
+    border: 2px solid #e0e7ff;
+}
+
+/* HTML Form Element Formating */
+.form{
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    border: 2px solid #e0e7ff;
+}
+
+.form_element{
+    display: block; 
+    margin-bottom: 5px; 
+    font-weight: bold;
+}
+
+.input{
+    width: 100%; 
+    padding: 8px; 
+    margin-bottom: 15px; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    box-sizing: border-box;
+}
+
+.legend{
+    margin-bottom: 15px; 
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.priority{
+    display: block;
+    margin: 5px 0;
+}
+
+.button_submit{
+   background-color: #5d10c9; 
+   color: white; 
+   padding: 10px 30px; 
+   border: none;
+   border-radius: 5px; 
+   cursor: pointer; 
+   font-size: 16px; 
+   margin-right: 10px;
+}
+
+.button_reset{
+    background-color: #6c757d; 
+    color: white; 
+    padding: 10px 30px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px;
 }
 
 h1, h2 {

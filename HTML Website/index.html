@@ -149,29 +149,33 @@
     </p>
         
     <div class="column-2" style="justify-content: center; gap: 90px;">
-        <li>Fruits
-            <ul>
-                <li>Apple</li>
-                <li>Banana</li>
-                <li>Citrus
-                    <ul>
-                        <li>Orange</li>
-                        <li>Lemon</li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li>Vegetables
-            <ul>
-                <li>Carrot</li>
-                <li>Broccoli</li>
-                <ol>
-                    <li>Item One</li>
-                    <li>Item Two</li>
-                    <li>Item Three</li>
-                </ol>
-            </ul>
-        </li>
+        <div class="list_container">
+            <li>Fruits
+                <ul>
+                    <li>Apple</li>
+                    <li>Banana</li>
+                    <li>Citrus
+                        <ul>
+                            <li>Orange</li>
+                            <li>Lemon</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </div>
+        <div class="list_container">
+            <li>Vegetables
+                <ul>
+                    <li>Carrot</li>
+                    <li>Broccoli</li>
+                    <ol>
+                        <li>Item One</li>
+                        <li>Item Two</li>
+                        <li>Item Three</li>
+                    </ol>
+                </ul>
+            </li>
+        </div>
     </div>
 </div>
 
@@ -182,14 +186,14 @@
         URLs are used to link to other web pages. We use the <span class="tags">&lt;a&gt;</span> tag to create a link.
         This tag <span class="tags">&lt;a&gt;</span> has the following attributes:
         <ul>
-            <li>href: Specifies the URL of the link</li>
-            <li>target: Specifies where to open the linked document</li>
-            <li>title: Specifies the title of the link</li>
-            <li>rel: Specifies the relationship between the current document and the linked document</li>
-            <li>type: Specifies the MIME type of the linked document. MIME stands for "Multipurpose Internet Mail Extensions".</li>
-            <li>charset: Specifies the character set of the linked document</li>
-            <li>name: Specifies the name of the link</li>
-            <li>rev: Specifies the reverse link of the link</li>
+            <li><span class ="bold_italic">href:</span> Specifies the URL of the link</li>
+            <li><span class ="bold_italic">target:</span> Specifies where to open the linked document</li>
+            <li><span class ="bold_italic">title:</span> Specifies the title of the link</li>
+            <li><span class ="bold_italic">rel:</span> Specifies the relationship between the current document and the linked document</li>
+            <li><span class ="bold_italic">type:</span> Specifies the MIME type of the linked document. MIME stands for "Multipurpose Internet Mail Extensions".</li>
+            <li><span class ="bold_italic">charset:</span> Specifies the character set of the linked document</li>
+            <li><span class ="bold_italic">name:</span> Specifies the name of the link</li>
+            <li><span class ="bold_italic">rev:</span> Specifies the reverse link of the link</li>
         </ul>
         Example:
         <br>
@@ -199,16 +203,108 @@
     </p>
 </div>
 
-
-
-
 <div>
     <!-- Form in HTML -->
-    <p>Forms in HTML </p>
+    <h2>Forms in HTML </h2>
+
+    <p>
+        Forms are used in HTML to collect user input and send it to a server for processing. They enable interactive web pages. 
+        <br>
+        <p>Common use Cases:</p>
+            <ul>
+                <li> <span class ="bold_italic"> User Authentication-</span> Login and registration.</li>
+                <li> <span class ="bold_italic"> Data Collection- </span> Contact forms, surveys, feedback.</li>
+                <li> <span class ="bold_italic"> E-Commerce- </span> Checkpuut, payment, shipping.</li>
+                <li> <span class ="bold_italic"> Search- </span> Search boxes.</li>
+                <li> <span class ="bold_italic"> Settings/Preference- </span> User profiles, account settings.</li>
+                <li> <span class ="bold_italic"> File Uploads- </span> Document and image uploads.</li>    
+                <li> <span class ="bold_italic"> Subscriptions- </span> Newsletter signups, email lists.</li>
+            </ul>
+        <p>How forms work:</p>
+        <ul>
+            <li> <span class ="bold_italic"> User Input- </span> Fields like text input, checkboxes, dropdowns, etc.</li>    
+            <li> <span class ="bold_italic"> Validation- </span> Check data before submission (client-side).</li>
+            <li> <span class ="bold_italic"> Submission- </span> Send data to a server (via GET or POST).</li>    
+            <li> <span class ="bold_italic"> Processing- </span> Server processes the data (save to database, send email, etc.)</li>
+            <li> <span class ="bold_italic"> Response- </span> Show a success message or redirect</li>
+        </ul>
+    </p>
+
+    <!-- Example Form -->
+    <div>
+        <h3 style="text-align: center;"">Example Contact Form</h3>
+        <p>
+            Here's an example of a contact form using various form elements:
+        </p>
+
+        <!-- Creating the form -->
+        <form action="#" method="POST" class="form">
+            <!-- Text Input -->
+            <label for="name" class="form_element">Name:</label>
+            <input type="text" id="name" name="name" class="input">
+
+            <!-- Email Input -->
+             <label for="email" class="form_element">Email:</label>
+             <input type="email" id="email" name="email" class="input">
+            
+            <!-- Select Dropdown -->
+             <label for="subject" class="form_element">Subject:</label>
+             <select id="subject" name="subject" class="input">
+                <option value="general">General Inquiry</option>
+                <option value="support">Technical Support</option>
+                <option value="feedback">Feedback</option>
+                <option value="other">Other</option>
+             </select>
+            
+             <!-- Text Area -->
+              <label for="message" class="form_element">Message:</label>
+              <textarea id="message" name="message" rows="5" class="input"></textarea>
+            
+            <!-- Radio Buttons -->
+            <fieldset class="legend">
+                <legend style="font-weight: bold;">Priority Level:</legend>
+                <label class="priority">
+                    <input type="radio" name="priority" value="low" checked>
+                    Low
+                </label>
+                <label class="priority">
+                    <input type="radio" name="priority" value="medium">
+                    Medium                   
+                </label>
+                <label class="priority">
+                    <input type="radio" name="priority" value="high">
+                    High                   
+                </label>
+            </fieldset>
+
+            <!-- Checkbox -->
+             <label class="form_element">
+                <input type="checkbox" name="newsletter" value="yes">
+                Subscribe to newsletter
+             </label>
+        </form>
+
+        <!-- Submit and Reset Buttons -->
+         <div style="text-align: center;">
+            <button type="submit" class="button_submit">Submit</button>
+            <button type="reset" class="button_reset">Reset</button>
+         </div>
+
+         <p>
+            <strong>Form Elements Used:</strong>
+            <ul>
+                <li><span class="tags">&lt;form&gt;</span> - Container for the form</li>
+                <li><span class="tags">&lt;label&gt;</span> - Labels for form fields</li>
+                <li><span class="tags">&lt;input&gt;</span> - Text, email input fields</li>
+                <li><span class="tags">&lt;select&gt;</span> - Dropdown menu</li>
+                <li><span class="tags">&lt;textarea&gt;</span> - Multi-line text input</li>
+                <li><span class="tags">&lt;button&gt;</span> - Submit and reset buttons</li>
+                <li><span class="tags">&lt;fieldset&gt;</span> - Groups related form elements</li>
+                <li><span class="tags">&lt;legend&gt;</span> - Caption for fieldset</li>
+            </ul>
+        </p>
+    </div>  
 </div>
-
-
-
 
 
 
@@ -230,6 +326,16 @@
     </ul>
 </div>
 
-
+<!-- 
+    This is linking the JavaScript file within my HTML so that I can manipulate it.
+    I could have placed it in the header. If that was the case, it would look like this. 
+    
+    script src="script.js" defer></script>
+    
+    Above, the defer attribute is used to delay the loading of the JS file until after the HTML 
+    document loads. This ensures better performance and smooth operation.
+-->
+ 
+<script src ="script.js"></script>
 </body>
 </html>
