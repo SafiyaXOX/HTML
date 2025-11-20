@@ -1,3 +1,27 @@
+// Language Navigation Banner Function
+function switchLanguage(lang, element) {
+    // Remove active class from all tabs
+    const tabs = document.querySelectorAll('.lang-tab');
+    tabs.forEach(tab => tab.classList.remove('active'));
+    
+    // Add active class to clicked tab
+    element.classList.add('active');
+    
+    // Navigate to different language pages
+    if (lang === 'html') {
+        // Navigate to HTML page (index.html)
+        window.location.href = 'index.html';
+    } else if (lang === 'css') {
+        window.location.href = 'css.html';
+    } else if (lang === 'js') {
+        window.location.href = 'javascript.html';
+    } else if (lang === 'ts') {
+        window.location.href = 'typescript.html';
+    } else if (lang === 'react') {
+        window.location.href = 'react.html';
+    }
+}
+
 // HTML Editor Functions
 
 function runCode() {
