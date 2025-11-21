@@ -97,9 +97,9 @@
 
     
     <div class="code_container">
-       &lt;img href= "https://www.samplesource.jpg" alt="Sample Picture" width="200" height ="200"&gt;
+       &lt;img src= "https://www.samplesource.jpg" alt="Sample Picture" width="200" height ="200"&gt;
        <br>
-       &lt;!-- This is a sample of how the code below is written --&gt;
+       &lt;!-- This is a sample of how the code for the picture below is written --&gt;
     </div>
 
     <!-- Inserts a figure. -->
@@ -144,6 +144,57 @@
             <td>Complex Layouts</td>
         </tr>
     </table>
+
+    <br>
+    <span class="bold_italic">Syntax:</span>
+    <div class="code_container">
+    <!-- Syntax for a small HTML table (with comments): -->
+    &lt;table&gt;<br>
+        &lt;!-- Table header row --&gt;<br>
+        &lt;tr&gt;<br>
+            &lt;th&gt;Name&lt;/th&gt; &lt;!-- Header cell for Name --&gt;<br>
+            &lt;th&gt;Age&lt;/th&gt;  &lt;!-- Header cell for Age --&gt;<br>
+        &lt;/tr&gt;<br>
+        &lt;!-- First data row --&gt;<br>
+        &lt;tr&gt;<br> 
+            &lt;td&gt;Alice&lt;/td&gt; &lt;!-- Data cell for Name --&gt;<br>
+            &lt;td&gt;22&lt;/td&gt;    &lt;!-- Data cell for Age --&gt;<br>
+        &lt;/tr&gt;<br>
+        &lt;!-- Second data row --&gt;<br>
+        &lt;tr&gt;<br>
+            &lt;td&gt;Bob&lt;/td&gt;<br>
+            &lt;td&gt;25&lt;/td&gt;<br>
+        &lt;/tr&gt;
+    <br>
+    &lt;/table&gt;<br>
+
+    &lt;!-- The code above is the syntax for the table displayed below. --&gt;<br>
+    
+    <table style="border: 2px solid #fff; border-collapse: collapse;">
+        <style>
+            table[style*="border:"] td, 
+            table[style*="border:"] th, 
+            table[style*="border:"] tr {
+                border: 2px solid #fff;
+            }
+        </style>
+        <!-- Table header row -->
+        <tr>
+            <th>Name</th> <!-- Header cell for Name -->
+            <th>Age</th>  <!-- Header cell for Age -->
+        </tr>
+        <!-- First data row -->
+        <tr> 
+            <td>Alice</td> <!-- Data cell for Name -->
+            <td>22</td>    <!-- Data cell for Age -->
+        </tr>
+        <!-- Second data row -->
+        <tr>
+            <td>Bob</td>
+            <td>25</td>
+        </tr>
+    </table>
+    </div>
 </div>
 
 <!-- Lists in HTML -->

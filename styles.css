@@ -65,6 +65,20 @@ body {
     border: 2px solid #e0e7ff;
 }
 
+.code_container {
+    background-color: #1a1f37; /* deep indigo/blue-black to contrast with white/purple */
+    color: #fceabb;            /* soft light yellow for code text */
+    border: 2px solid #fceabb;
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin: 22px 0;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 1rem;
+    overflow-x: auto;
+    box-shadow: 0 6px 24px rgba(26,31,55, 0.08);
+    transition: box-shadow 0.2s;
+}
+
 /* HTML Form Element Formating */
 .form{
     max-width: 600px;
@@ -370,19 +384,7 @@ td, th {
 }
 
 
-.code_container {
-    background-color: #1a1f37; /* deep indigo/blue-black to contrast with white/purple */
-    color: #fceabb;            /* soft light yellow for code text */
-    border: 2px solid #fceabb;
-    border-radius: 12px;
-    padding: 18px 22px;
-    margin: 22px 0;
-    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
-    font-size: 1rem;
-    overflow-x: auto;
-    box-shadow: 0 6px 24px rgba(26,31,55, 0.08);
-    transition: box-shadow 0.2s;
-}
+
 
 /*
     In CSS, the :hover pseudo-class is used to define the style of an element when the user places their mouse pointer over it.
