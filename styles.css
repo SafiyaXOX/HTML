@@ -370,7 +370,7 @@ td, th {
 }
 
 
-.code-container {
+.code_container {
     background-color: #1a1f37; /* deep indigo/blue-black to contrast with white/purple */
     color: #fceabb;            /* soft light yellow for code text */
     border: 2px solid #fceabb;
