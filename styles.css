@@ -298,6 +298,10 @@ td, th {
 }
 
 @media (max-width: 768px) {
+    body {
+        margin: 10px;
+    }
+    
     .editor-wrapper {
         flex-direction: column;
     }
@@ -305,6 +309,21 @@ td, th {
     .code-editor,
     .output-frame {
         height: 300px;
+    }
+    
+    .language-banner {
+        padding: 15px 10px;
+        gap: 8px;
+    }
+    
+    .lang-tab {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    
+    .header {
+        padding: 30px 20px;
+        font-size: 24px;
     }
 }
 
