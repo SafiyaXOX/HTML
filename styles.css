@@ -368,3 +368,33 @@ td, th {
     background-color: #4a0da8;
     transform: translateY(-2px);
 }
+
+
+.code-container {
+    background-color: #1a1f37; /* deep indigo/blue-black to contrast with white/purple */
+    color: #fceabb;            /* soft light yellow for code text */
+    border: 2px solid #fceabb;
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin: 22px 0;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 1rem;
+    overflow-x: auto;
+    box-shadow: 0 6px 24px rgba(26,31,55, 0.08);
+    transition: box-shadow 0.2s;
+}
+
+/*
+    In CSS, the :hover pseudo-class is used to define the style of an element when the user places their mouse pointer over it.
+    This is commonly used to provide visual feedback for interactive elements (like buttons or links). For example:
+
+    .button:hover {
+        background-color: #e0e7ff;
+        color: #5d10c9;
+        box-shadow: 0 4px 8px rgba(93, 16, 201, 0.2);
+    }
+
+    The above rule changes the background color, text color, and adds a shadow effect to a button when it is hovered over.
+    Hover effects help users understand which elements on a page are interactive.
+*/
+
