@@ -79,6 +79,10 @@ body {
     transition: box-shadow 0.2s;
 }
 
+.home_info { 
+    flex: 1; 
+}
+
 /* HTML Form Element Formating */
 .form{
     max-width: 600px;
@@ -382,6 +386,35 @@ td, th {
     background-color: #4a0da8;
     transform: translateY(-2px);
 }
+
+
+.home {
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #5d10c9;
+    border: 2px solid #5d10c9;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Consolas", monospace;
+}
+.home.active {
+    background-color: #5d10c9;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(93, 16, 201, 0.3);
+}
+
+.home.active:hover {
+    background-color: #4a0da8;
+    transform: translateY(-2px);
+}
+
+
+
+
+
 
 
 

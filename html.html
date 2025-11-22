@@ -1,0 +1,567 @@
+<!-- Stating the Document Type -->
+<!DOCTYPE html>
+<html lang="en"> <!-- Language of the HTML file/website -->
+<head>
+    <!-- Linking the styles.css file -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+    <div style="position: absolute; top: 30px; left: 30px; font-size: 1rem; z-index: 100; background: transparent; border: none; box-shadow: none;">
+        <nav>
+            <button class="home active" onclick="switchLanguage('home',this)"><i class="fa-regular fa-house"></i></button>
+        </nav>
+    </div>
+    <h1 class="welcome">Learning HTML</h1>
+</div>
+
+<!-- Language Navigation Banner -->
+<nav class="language-banner">
+    <button class="lang-tab active" onclick="switchLanguage('html', this)">HTML</button>
+    <button class="lang-tab" onclick="switchLanguage('css', this)">CSS</button>
+    <button class="lang-tab" onclick="switchLanguage('js', this)">JavaScript</button>
+    <button class="lang-tab" onclick="switchLanguage('ts', this)">TypeScript</button>
+    <button class="lang-tab" onclick="switchLanguage('react', this)">React</button>
+</nav>
+
+<!-- Introduction to HTML -->
+<h2>Introduction to HTML</h2>
+<div class="text">
+    <!-- Paragraph Elements; Incorporating Line Indentation -->
+    <p> HTML stands for HyperText Markup Language.
+        HTML is the standard markup language for creating Web pages.
+        HTML describes the structure of a Web page.
+        HTML consists of a series of elements.
+        HTML elements tell the browser how to display the content.
+    </p>
+
+    <p>
+        <!-- HTML Elements use tags. -->
+        HTML elements are represented by tags.
+        HTML tags label pieces of content such as "heading", "paragraph", "table", and so on.
+        Browsers do not display the HTML tags, but use them to render the content of the page.
+    </p>
+
+    <!-- Headings in HTML -->
+    <p>
+        HTML consists of headings. The headings go from <span class="tags">&lt;h1&gt</span> to <span class="tags">&lt;h6&gt</span>.
+        This text is written in what you call a paragraph.
+        Noted using <span class="tags">&lt;p&gt;</span> and <span class="tags">&lt;/p&gt;</span> tags."
+        <br>
+        <!-- <br> represents a line break -->
+        The line breaks you see (ending a line and starting a new one) is noted using
+        <span class="tags">&lt;br&gt;</span> tag.
+        <br><br> 
+        Below are the types of headings in HTML.
+    
+        <!-- Heading Types 1-6 -->
+        <h1 class="left-align">This is an h1 heading.</h1>
+        <h2 class="left-align">This is an h2 heading.</h2>
+        <h3 class="left-align">This is an h3 heading.</h3>
+        <h4 class="left-align">This is an h4 heading.</h4>
+        <h5 class="left-align">This is an h5 heading.</h5>
+        <h6 class="left-align">This is an h6 heading.</h6>
+
+        So you can see that the headings decrease in size the closer 
+        you get to h6; h1 being the largest size.
+        <br><br> 
+        <span class="bold_italic"><i class="fa-solid fa-code"></i> Code Syntax:</span>
+        <div class="code_container">
+            &lt;h1&gt; This is a sample heading. &lt;/h1&gt;
+            <br>
+            &lt;p&gt; This is a sample paragraph. &lt;/p&gt;
+            <br>
+            &lt;!-- This is how a comment is written. 
+            Comments are used to make notes in your code; 
+            which allows other coders to undertand your code as well. --&gt;
+        </div>
+        
+    </p>
+</div>
+
+<!-- Images and Image Captions -->
+<!-- Division Tag <div> represents a section in the HTML Code. This helps with code structure. -->
+<h2>Images and Image Captions</h2>
+<div class="text">
+    <p>
+        Images in HTML can be added from your local device or from another website using the <span class="tags">&lt;img&gt;</span> tag. 
+        It is one of the tags that don't require a closing tag. You can place the image tags within or outside of a <span class="tags">&lt;figure&gt;</span> tag.
+        <br><br>
+        The most commonly used attributes with the <span class="tags">&lt;img&gt;</span> tag are:
+        <ul>
+            <li><span class="tags">src</span> &ndash; Specifies the image source (URL or file path).</li>
+            <li><span class="tags">alt</span> &ndash; Provides alternative text for the image if it can't be displayed.</li>
+            <li><span class="tags">width</span> &ndash; Sets the width of the image in pixels or percentage.</li>
+            <li><span class="tags">height</span> &ndash; Sets the height of the image in pixels or percentage.</li>
+            <li><span class="tags">title</span> &ndash; Shows extra information about the image when you hover over it.</li>
+        </ul>
+        <span class="bold_italic"><i class="fa-solid fa-code"></i> Code Syntax:</span>
+    </p>
+
+    
+    <div class="code_container">
+       &lt;img src= "https://www.samplesource.jpg" alt="Sample Picture" width="200" height ="200"&gt;
+       <br>
+       &lt;!-- This is a sample of how the code for the picture below is written --&gt;
+    </div>
+
+    <!-- Inserts a figure. -->
+    <figure style="text-align: center; margin: 20px auto;">
+        <img src="https://cdn.britannica.com/34/235834-050-C5843610/two-different-breeds-of-cats-side-by-side-outdoors-in-the-garden.jpg" 
+        alt="Two Cute Cats" width="450" height="300">
+        <!-- Figure Caption -->
+        <figcaption><span style="font-style: italic;">Two Cute Cats</span></figcaption>
+    </figure>
+
+</div>
+ 
+<!-- Tables in HTML -->
+<h2>Tables</h2>
+<div class="text">
+    <p> <!-- Description of tables in HTML -->
+        Tables are used to display data in a structured format. We use the <span class="tags">&lt;table&gt;</span> tag to create a table.
+        The <span class="tags">&lt;tr&gt;</span> tag is used to create a table row.
+        The <span class="tags">&lt;th&gt;</span> tag is used to create a table header.
+        The <span class="tags">&lt;td&gt;</span> tag is used to create a table cell.
+    </p>
+    <table> <!-- Table Structure -->
+        <tr>
+            <!-- Table Header -->
+            <!-- colspan="5" means the header will span 5 columns -->
+            <th colspan="5" style="text-align: center;">HTML</th>
+        </tr>
+        <tr> 
+            <!-- Listing some advantages of HTML -->
+            <th style="font-style: italic;">Advantages</th>
+            <td>Ease of Learning and Use</td>
+            <td>Universal Browser Compatibility</td>
+            <td>Integration with Other Technologies</td>
+            <td>Lightweight and Fast Loading</td>
+        </tr>
+        <tr> 
+            <!-- Listing some disadvanatges of HTML -->
+            <th style="font-style: italic;">Disadvantages</th>
+            <td>Static Content</td>
+            <td>Lack of Dynamism</td>
+            <td>No Programming Capabilities</td>
+            <td>Complex Layouts</td>
+        </tr>
+    </table>
+
+    <br>
+    <span class="bold_italic"><i class="fa-solid fa-code"></i> Code Syntax:</span>
+    <div class="code_container">
+    <!-- Syntax for a small HTML table (with comments): -->
+    &lt;table&gt;<br>
+        &lt;!-- Table header row --&gt;<br>
+        &lt;tr&gt;<br>
+            &lt;th&gt;Name&lt;/th&gt; &lt;!-- Header cell for Name --&gt;<br>
+            &lt;th&gt;Age&lt;/th&gt;  &lt;!-- Header cell for Age --&gt;<br>
+        &lt;/tr&gt;<br>
+        &lt;!-- First data row --&gt;<br>
+        &lt;tr&gt;<br> 
+            &lt;td&gt;Alice&lt;/td&gt; &lt;!-- Data cell for Name --&gt;<br>
+            &lt;td&gt;22&lt;/td&gt;    &lt;!-- Data cell for Age --&gt;<br>
+        &lt;/tr&gt;<br>
+        &lt;!-- Second data row --&gt;<br>
+        &lt;tr&gt;<br>
+            &lt;td&gt;Bob&lt;/td&gt;<br>
+            &lt;td&gt;25&lt;/td&gt;<br>
+        &lt;/tr&gt;
+    <br>
+    &lt;/table&gt;<br>
+
+    &lt;!-- The code above is the syntax for the table displayed below. --&gt;<br><br>
+    
+    <table style="border: 2px solid #fff; border-collapse: collapse;">
+        <style>
+            table[style*="border:"] td, 
+            table[style*="border:"] th, 
+            table[style*="border:"] tr {
+                border: 2px solid #fff;
+            }
+        </style>
+        <!-- Table header row -->
+        <tr>
+            <th>Name</th> <!-- Header cell for Name -->
+            <th>Age</th>  <!-- Header cell for Age -->
+        </tr>
+        <!-- First data row -->
+        <tr> 
+            <td>Alice</td> <!-- Data cell for Name -->
+            <td>22</td>    <!-- Data cell for Age -->
+        </tr>
+        <!-- Second data row -->
+        <tr>
+            <td>Bob</td>
+            <td>25</td>
+        </tr>
+    </table>
+    </div>
+</div>
+
+<!-- Lists in HTML -->
+<h2>Lists</h2>
+<div class="text">
+    <p>
+        HTML supports several types of lists that help organize content. The two primary types are unordered lists (bulleted lists) and ordered lists (numbered lists). Lists are helpful for structuring information clearly.
+        <br><br>
+        Example:
+    </p>
+    <div class="column-2" style="justify-content: center; gap: 200px;">
+        <div>
+            <!-- Unordered List -->
+            <h3 style="margin-top: 0;">Unordered List</h3>
+            <ul>
+                <li>Item One</li>
+                <li>Item Two</li>
+                <li>Item Three</li>
+            </ul>
+        </div>
+        <div>
+            <!-- Ordered List -->
+            <h3 style="margin-top: 0;">Ordered List</h3>
+            <ol>
+                <li>First Step</li>
+                <li>Second Step</li>
+                <li>Third Step</li>
+            </ol>
+        </div>
+    </div>
+
+    <p>
+        Use the <span class="tags">&lt;ul&gt;</span> tag for unordered lists and <span class="tags">&lt;ol&gt;</span> for ordered lists. Each list item goes inside a <span class="tags">&lt;li&gt;</span> tag.
+    </p>
+    <!-- Nested Lists -->
+    <h3 style="text-align: center;">Nested Lists</h3>
+    <p>
+        You can nest lists inside other lists to create sub-items. Here, we used an unordered list inside another unordered list. You can also mix ordered and unordered lists if needed.
+    </p>
+        
+    <div class="column-2" style="justify-content: center; gap: 90px;">
+        <div class="list_container">
+            <li>Fruits
+                <ul>
+                    <li>Apple</li>
+                    <li>Banana</li>
+                    <li>Citrus
+                        <ul>
+                            <li>Orange</li>
+                            <li>Lemon</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </div>
+        <div class="list_container">
+            <li>Vegetables
+                <ul>
+                    <li>Carrot</li>
+                    <li>Broccoli</li>
+                    <ol>
+                        <li>Item One</li>
+                        <li>Item Two</li>
+                        <li>Item Three</li>
+                    </ol>
+                </ul>
+            </li>
+        </div>
+    </div>
+</div>
+
+<!-- URLs in HTML (Linking to other web pages) -->
+<h2> URLs in HTML</h2>
+<div class="text">
+    <p> 
+        URLs are used to link to other web pages. We use the <span class="tags">&lt;a&gt;</span> tag to create a link.
+        This tag <span class="tags">&lt;a&gt;</span> has the following attributes:
+        <ul>
+            <li><span class ="bold_italic">href:</span> Specifies the URL of the link</li>
+            <li><span class ="bold_italic">target:</span> Specifies where to open the linked document</li>
+            <li><span class ="bold_italic">title:</span> Specifies the title of the link</li>
+            <li><span class ="bold_italic">rel:</span> Specifies the relationship between the current document and the linked document</li>
+            <li><span class ="bold_italic">type:</span> Specifies the MIME type of the linked document. MIME stands for "Multipurpose Internet Mail Extensions".</li>
+            <li><span class ="bold_italic">charset:</span> Specifies the character set of the linked document</li>
+            <li><span class ="bold_italic">name:</span> Specifies the name of the link</li>
+            <li><span class ="bold_italic">rev:</span> Specifies the reverse link of the link</li>
+        </ul>
+        Example:
+        <br>
+        Taking a link from this website directing you to Google.
+        <br>
+        <a href= "https://www.google.com" target="_blank">Click here to go to Google </a>
+    </p>
+</div>
+
+<!-- Form in HTML -->
+<h2>Forms in HTML </h2>
+
+<div class="text">
+    <p>
+        Forms are used in HTML to collect user input and send it to a server for processing. They enable interactive web pages. 
+        <br>
+        <p>Common use Cases:</p>
+            <ul>
+                <li> <span class ="bold_italic"> User Authentication-</span> Login and registration.</li>
+                <li> <span class ="bold_italic"> Data Collection- </span> Contact forms, surveys, feedback.</li>
+                <li> <span class ="bold_italic"> E-Commerce- </span> Checkpuut, payment, shipping.</li>
+                <li> <span class ="bold_italic"> Search- </span> Search boxes.</li>
+                <li> <span class ="bold_italic"> Settings/Preference- </span> User profiles, account settings.</li>
+                <li> <span class ="bold_italic"> File Uploads- </span> Document and image uploads.</li>    
+                <li> <span class ="bold_italic"> Subscriptions- </span> Newsletter signups, email lists.</li>
+            </ul>
+        <p>How forms work:</p>
+        <ul>
+            <li> <span class ="bold_italic"> User Input- </span> Fields like text input, checkboxes, dropdowns, etc.</li>    
+            <li> <span class ="bold_italic"> Validation- </span> Check data before submission (client-side).</li>
+            <li> <span class ="bold_italic"> Submission- </span> Send data to a server (via GET or POST).</li>    
+            <li> <span class ="bold_italic"> Processing- </span> Server processes the data (save to database, send email, etc.)</li>
+            <li> <span class ="bold_italic"> Response- </span> Show a success message or redirect</li>
+        </ul>
+    </p>
+
+    <!-- Example Form -->
+    <div>
+        <h3 style="text-align: center;"">Example Contact Form</h3>
+        <p>
+            Here's an example of a contact form using various form elements:
+        </p>
+
+        <!-- Creating the form -->
+        <form action="#" method="POST" class="form">
+            <!-- Text Input -->
+            <label for="name" class="form_element">Name:</label>
+            <input type="text" id="name" name="name" class="input">
+
+            <!-- Email Input -->
+             <label for="email" class="form_element">Email:</label>
+             <input type="email" id="email" name="email" class="input">
+            
+            <!-- Select Dropdown -->
+             <label for="subject" class="form_element">Subject:</label>
+             <select id="subject" name="subject" class="input">
+                <option value="general">General Inquiry</option>
+                <option value="support">Technical Support</option>
+                <option value="feedback">Feedback</option>
+                <option value="other">Other</option>
+             </select>
+            
+             <!-- Text Area -->
+              <label for="message" class="form_element">Message:</label>
+              <textarea id="message" name="message" rows="5" class="input"></textarea>
+            
+            <!-- Radio Buttons -->
+            <fieldset class="legend">
+                <legend style="font-weight: bold;">Priority Level:</legend>
+                <label class="priority">
+                    <input type="radio" name="priority" value="low" checked>
+                    Low
+                </label>
+                <label class="priority">
+                    <input type="radio" name="priority" value="medium">
+                    Medium                   
+                </label>
+                <label class="priority">
+                    <input type="radio" name="priority" value="high">
+                    High                   
+                </label>
+            </fieldset>
+
+            <!-- Checkbox -->
+             <label class="form_element">
+                <input type="checkbox" name="newsletter" value="yes">
+                Subscribe to newsletter
+             </label>
+        </form>
+
+        <!-- Submit and Reset Buttons -->
+         <div style="text-align: center;">
+            <button type="submit" class="button_submit">Submit</button>
+            <button type="reset" class="button_reset">Reset</button>
+         </div>
+
+         <p>
+            <strong>Form Elements Used:</strong>
+            <ul>
+                <li><span class="tags">&lt;form&gt;</span> - Container for the form</li>
+                <li><span class="tags">&lt;label&gt;</span> - Labels for form fields</li>
+                <li><span class="tags">&lt;input&gt;</span> - Text, email input fields</li>
+                <li><span class="tags">&lt;select&gt;</span> - Dropdown menu</li>
+                <li><span class="tags">&lt;textarea&gt;</span> - Multi-line text input</li>
+                <li><span class="tags">&lt;button&gt;</span> - Submit and reset buttons</li>
+                <li><span class="tags">&lt;fieldset&gt;</span> - Groups related form elements</li>
+                <li><span class="tags">&lt;legend&gt;</span> - Caption for fieldset</li>
+            </ul>
+        </p>
+    </div>  
+</div>
+
+
+<!-- IFrames in HTML-->
+<h2>IFrames</h2>
+<div class="text">
+    <h3 style="font-style: italic;">What is an IFrame?</h3>
+    <p>
+        An IFrame (Inline Frame) is n HTML element that embeds another HTML document inside the current page.
+        It creates a window within your page that displays content from another source.
+        <br><br>
+        We use the <span class="tags">&lt;iframe&gt;</span> tag to create an iframe.
+    </p>
+        <p><strong>Common Use Cases:</strong></p>
+    <ul>
+        <li><span class="bold_italic">Video Embedding-</span> Embedding YouTube, Vimeo, or other video content</li>
+        <li><span class="bold_italic">Maps-</span> Displaying Google Maps or other mapping services</li>
+        <li><span class="bold_italic">Social Media-</span> Embedding Twitter feeds, Facebook posts, Instagram content</li>
+        <li><span class="bold_italic">Documents-</span> Displaying PDFs or other documents</li>
+        <li><span class="bold_italic">Widgets-</span> Including interactive widgets from other websites</li>
+        <li><span class="bold_italic">Third-party Content-</span> Embedding content from external sources</li>
+    </ul>
+    
+    <p><strong>Common IFrame Attributes:</strong></p>
+    <ul>
+        <li><span class="bold_italic">src:</span> Specifies the URL of the page to embed</li>
+        <li><span class="bold_italic">width:</span> Sets the width of the iframe (in pixels or percentage)</li>
+        <li><span class="bold_italic">height:</span> Sets the height of the iframe (in pixels or percentage)</li>
+        <li><span class="bold_italic">title:</span> Provides a descriptive title for accessibility</li>
+        <li><span class="bold_italic">frameborder:</span> Controls the border around the iframe (0 = no border, 1 = border)</li>
+        <li><span class="bold_italic">allowfullscreen:</span> Allows the iframe content to enter fullscreen mode</li>
+        <li><span class="bold_italic">sandbox:</span> Applies security restrictions to the iframe content</li>
+    </ul>
+    <h3 style="text-align: center;">Example: Embedding a YouTube Video</h3>
+    <p>
+        Here's an example of embedding a YouTube video using an iframe:
+    </p>
+    
+    <div style="text-align: center; margin: 20px 0;">
+        <iframe 
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/jNQXAC9IVRw" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen
+            style="max-width: 100%; border-radius: 10px;">
+        </iframe>
+    </div>
+    
+    <p>
+        <strong>Code Breakdown:</strong>
+        <br>
+        The <span class="tags">&lt;iframe&gt;</span> tag above includes:
+        <ul>
+            <li><span class="bold_italic">src:</span> The URL of the YouTube video to embed</li>
+            <li><span class="bold_italic">width and height:</span> Dimensions of the video player</li>
+            <li><span class="bold_italic">title:</span> Descriptive text for screen readers</li>
+            <li><span class="bold_italic">allowfullscreen:</span> Enables fullscreen viewing</li>
+            <li><span class="bold_italic">allow:</span> Permissions for various features (autoplay, picture-in-picture, etc.)</li>
+        </ul>
+    </p>
+    
+    <h3 style="text-align: center;">Example: Embedding Google Maps</h3>
+    <p>
+        Here's an example of embedding a Google Map:
+    </p>
+    
+    <div style="text-align: center; margin: 20px 0;">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.184132576894!2d-73.98811768459398!3d40.75889597932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus" 
+            width="600" 
+            height="450" 
+            style="border:0; max-width: 100%; border-radius: 10px;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Google Maps - Times Square">
+        </iframe>
+    </div>
+    
+    <p>
+        <strong>Important Notes:</strong>
+        <ul>
+            <li>Some websites block embedding their content in iframes for security reasons (X-Frame-Options header)</li>
+            <li>Always include a <span class="bold_italic">title</span> attribute for accessibility</li>
+            <li>Use responsive design techniques (max-width: 100%) to make iframes work on mobile devices</li>
+            <li>The <span class="bold_italic">sandbox</span> attribute can restrict iframe capabilities for security</li>
+        </ul>
+    </p>
+</div>
+
+
+<!-- HTML Editor/Compiler -->
+<h2>Try It Yourself: HTML Editor</h2>
+<div class="text">
+    <p>
+        Practice writing HTML code below. Type your HTML code in the editor and click "Run" to see the output.
+    </p>
+    
+    <div class="html-editor-container">
+        <div class="editor-header">
+            <h3 style="margin: 0; text-align: center;">HTML Editor</h3>
+        </div>
+        
+        <div class="editor-wrapper">
+            <div class="editor-section">
+                <label for="html-code" class="editor-label">Write your HTML code here:</label>
+                <textarea 
+                    id="html-code" 
+                    class="code-editor" 
+                    placeholder="Enter your HTML code here...&#10;&#10;Example:&#10;&lt;h1&gt;Hello World!&lt;/h1&gt;&#10;&lt;p&gt;This is my first HTML page.&lt;/p&gt;"
+                ></textarea>
+                <div class="editor-buttons">
+                    <button onclick="runCode()" class="button-run">Run Code</button>
+                    <button onclick="clearCode()" class="button-clear">Clear</button>
+                    <button onclick="loadExample()" class="button-example">Load Example</button>
+                </div>
+            </div>
+            
+            <div class="output-section">
+                <label class="editor-label">Output:</label>
+                <iframe id="output-frame" class="output-frame" title="HTML Output"></iframe>
+            </div>
+        </div>
+    </div>
+    
+    <p>
+        <strong>Tips:</strong>
+        <ul>
+            <li>Click "Run Code" to see your HTML rendered in the output area</li>
+            <li>Click "Clear" to clear both the editor and output</li>
+            <li>Click "Load Example" to see a sample HTML code</li>
+            <li>You can write complete HTML documents including CSS in &lt;style&gt; tags</li>
+        </ul>
+    </p>
+</div>
+
+
+
+
+
+<h2>Useful Resources</h2>
+<div class="resource">
+    <p>Here are some helpful websites for learning HTML:</p>
+    <ul>
+        <!-- "href" is the link to the website -->
+        <!-- "target="_blank"" opens the link in a new tab -->
+        <li><a href="https://www.freecodecamp.org" target="_blank">FreeCodeCamp</a></li>
+        <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
+        <li><a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a></li>
+    </ul>
+</div>
+
+<!-- 
+    This is linking the JavaScript file within my HTML so that I can manipulate it.
+    I could have placed it in the header. If that was the case, it would look like this. 
+    
+    script src="script.js" defer></script>
+    
+    Above, the defer attribute is used to delay the loading of the JS file until after the HTML 
+    document loads. This ensures better performance and smooth operation.
+-->
+ 
+<script src ="script.js"></script>
+</body>
+</html>

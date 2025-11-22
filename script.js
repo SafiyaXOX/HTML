@@ -8,10 +8,15 @@ function switchLanguage(lang, element) {
     element.classList.add('active');
     
     // Navigate to different language pages
-    if (lang === 'html') {
-        // Navigate to HTML page (index.html)
+    if (lang === 'home'){
+        // Navigate to Home Page
         window.location.href = 'index.html';
+    } 
+    else if (lang === 'html') {
+        // Navigate to HTML page
+        window.location.href = 'html.html';
     } else if (lang === 'css') {
+        //Navigate to CSS page
         window.location.href = 'css.html';
     } else if (lang === 'js') {
         window.location.href = 'javascript.html';
