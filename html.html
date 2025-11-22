@@ -31,18 +31,19 @@
 <h2>Introduction to HTML</h2>
 <div class="text">
     <!-- Paragraph Elements; Incorporating Line Indentation -->
-    <p> HTML stands for HyperText Markup Language.
-        HTML is the standard markup language for creating Web pages.
-        HTML describes the structure of a Web page.
-        HTML consists of a series of elements.
-        HTML elements tell the browser how to display the content.
+    <p> 
+        HTML stands for HyperText Markup Language. 
+        It is the standard language used to create web pages and define their structure.
+        An HTML document is made up of a series of elements.
+        These elements tell the browser how to organize and display the content on the page.
     </p>
 
     <p>
         <!-- HTML Elements use tags. -->
-        HTML elements are represented by tags.
-        HTML tags label pieces of content such as "heading", "paragraph", "table", and so on.
-        Browsers do not display the HTML tags, but use them to render the content of the page.
+        HTML elements are defined using tags. These tags identify different types of content, 
+        such as headings, paragraphs, and tables. 
+        Although browsers do not display the tags themselves, they use them to determine how the page content 
+        should be structured and shown to users.
     </p>
 
     <!-- Headings in HTML -->
@@ -156,21 +157,21 @@
     <div class="code_container">
     <!-- Syntax for a small HTML table (with comments): -->
     &lt;table&gt;<br>
-        &lt;!-- Table header row --&gt;<br>
-        &lt;tr&gt;<br>
-            &lt;th&gt;Name&lt;/th&gt; &lt;!-- Header cell for Name --&gt;<br>
-            &lt;th&gt;Age&lt;/th&gt;  &lt;!-- Header cell for Age --&gt;<br>
-        &lt;/tr&gt;<br>
-        &lt;!-- First data row --&gt;<br>
-        &lt;tr&gt;<br> 
-            &lt;td&gt;Alice&lt;/td&gt; &lt;!-- Data cell for Name --&gt;<br>
-            &lt;td&gt;22&lt;/td&gt;    &lt;!-- Data cell for Age --&gt;<br>
-        &lt;/tr&gt;<br>
-        &lt;!-- Second data row --&gt;<br>
-        &lt;tr&gt;<br>
-            &lt;td&gt;Bob&lt;/td&gt;<br>
-            &lt;td&gt;25&lt;/td&gt;<br>
-        &lt;/tr&gt;
+    &lt;!-- Table header row --&gt;<br>
+    &nbsp;&nbsp;&lt;tr&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Name&lt;/th&gt; &lt;!-- Header cell for Name --&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Age&lt;/th&gt;  &lt;!-- Header cell for Age --&gt;<br>
+    &nbsp;&nbsp;&lt;/tr&gt;<br>
+    &lt;!-- First data row --&gt;<br>
+    &nbsp;&nbsp;&lt;tr&gt;<br> 
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Alice&lt;/td&gt; &lt;!-- Data cell for Name --&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;22&lt;/td&gt;    &lt;!-- Data cell for Age --&gt;<br>
+    &nbsp;&nbsp;&lt;/tr&gt;<br>
+    &lt;!-- Second data row --&gt;<br>
+    &nbsp;&nbsp;&lt;tr&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Bob&lt;/td&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;25&lt;/td&gt;<br>
+    &nbsp;&nbsp;&lt;/tr&gt;
     <br>
     &lt;/table&gt;<br>
 
@@ -235,6 +236,19 @@
     <p>
         Use the <span class="tags">&lt;ul&gt;</span> tag for unordered lists and <span class="tags">&lt;ol&gt;</span> for ordered lists. Each list item goes inside a <span class="tags">&lt;li&gt;</span> tag.
     </p>
+    <br>
+    <span class="bold_italic"><i class="fa-solid fa-code"></i> Code Syntax:</span>
+    <div class="code_container">
+        &lt;!-- Syntax for sample listings --&gt;<br>
+        &lt;ul&gt;<br>
+        &nbsp;&nbsp;&lt;li&gt; Item One &lt;/li&gt;<br>
+        &lt;/ul&gt;<br>
+        &lt;ol&gt;<br>
+        &nbsp;&nbsp;&lt;li&gt; First Step &lt;/li&gt;<br>
+        &lt;/ol&gt; 
+    </div>
+
+
     <!-- Nested Lists -->
     <h3 style="text-align: center;">Nested Lists</h3>
     <p>
@@ -269,6 +283,19 @@
                 </ul>
             </li>
         </div>
+    </div>
+    <span class="bold_italic"><br><i class="fa-solid fa-code"></i>Code Syntax:</span>
+    <div class="code_container">
+        &lt;!-- Syntax for a sample nested listing --&gt;<br>
+        &lt;ul&gt;<br>
+        &nbsp;&nbsp;&lt;li&gt; Fruits &lt;/li&gt;<br>
+        &nbsp;&nbsp;&lt;ul&gt;<br>
+        
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt; Apple &lt;/li&gt;<br>
+        &nbsp;&nbsp;&lt;/ul&gt;<br>
+        
+        &lt;/ul&gt;<br>
+        
     </div>
 </div>
 
