@@ -11,8 +11,9 @@ body {
     Generic families: serif, sans-serif, monospace, cursive, fantasy
     */
     line-height: 1.6;
-    margin: 20px;
-    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    background-color: white;
     color: #000000;
 }
 
@@ -25,7 +26,15 @@ body {
     display: flex;
 }
 
-.header {
+.header-1{
+    background-color: #f0f4ff;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    margin: 0;
+}
+.header-2 {
+    position: relative;
     padding: 50px;
     text-align: center;
     background: #5d10c9;
@@ -33,6 +42,7 @@ body {
     font-size: 30px;
     border-radius: 20px;
     border: 3px solid black;
+    
 }
 
 .welcome {
@@ -79,9 +89,7 @@ body {
     transition: box-shadow 0.2s;
 }
 
-.home_info { 
-    flex: 1; 
-}
+
 
 /* HTML Form Element Formating */
 .form{

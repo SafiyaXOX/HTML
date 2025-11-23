@@ -8,25 +8,28 @@
 </head>
 <body>
     <!-- Header -->
-    <div class="header">
-        <div style="position: absolute; top: 30px; left: 30px; font-size: 1rem; z-index: 100; background: transparent; border: none; box-shadow: none;">
-            <nav>
-                <button class="home active" onclick="switchLanguage('home',this)">
-                    <i class="fa-regular fa-house"></i>
-                </button>
-            </nav>
+    <section class="header-1">
+        <div class="header-2">
+            <div style="position: absolute; top: 30px; left: 30px; font-size: 1rem; z-index: 100; background: transparent; border: none; box-shadow: none;">
+                <nav>
+                    <button class="home active" onclick="switchLanguage('home',this)">
+                        <i class="fa-regular fa-house"></i>
+                    </button>
+                </nav>
+            </div>
+            <h1 class="welcome">Learning TypeScript</h1>
         </div>
-        <h1 class="welcome">Learning TypeScript</h1>
-    </div>
-
-    <!-- Language Navigation Banner -->
-    <nav class="language-banner">
-        <button class="lang-tab" onclick="switchLanguage('html', this)">HTML</button>
-        <button class="lang-tab" onclick="switchLanguage('css', this)">CSS</button>
-        <button class="lang-tab" onclick="switchLanguage('js', this)">JavaScript</button>
-        <button class="lang-tab active" onclick="switchLanguage('ts', this)">TypeScript</button>
-        <button class="lang-tab" onclick="switchLanguage('react', this)">React</button>
-    </nav>
+    
+        <!-- Language Navigation Banner -->
+        <nav class="language-banner">
+            <button class="lang-tab" onclick="switchLanguage('html', this)">HTML</button>
+            <button class="lang-tab" onclick="switchLanguage('css', this)">CSS</button>
+            <button class="lang-tab" onclick="switchLanguage('js', this)">JavaScript</button>
+            <button class="lang-tab active" onclick="switchLanguage('ts', this)">TypeScript</button>
+            <button class="lang-tab" onclick="switchLanguage('react', this)">React</button>
+        </nav>
+    </section>
+    
 
     <!-- Blank space to work with -->
     <div>
