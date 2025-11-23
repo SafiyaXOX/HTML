@@ -27,6 +27,17 @@ function switchLanguage(lang, element) {
     }
 }
 
+function switchEditor(editor) {
+    // Available values for editor: 'html', 'css', 'js'
+    if (editor === 'html') {
+        window.open('Editors/html-editor.html', '_blank');
+    } else if (editor === 'css') {
+        window.open('Editors/css-editor.html', '_blank');
+    } else if (editor === 'js') {
+        window.open('Editors/js-editor.html', '_blank');
+    }
+}
+
 // HTML Editor Functions
 
 function runCode() {

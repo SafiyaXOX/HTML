@@ -29,7 +29,7 @@
     </section>
 
     <section class="body">
-        
+
         <!-- Introduction to HTML -->
         <h2>Introduction to HTML</h2>
         <div class="text">
@@ -80,7 +80,8 @@
                     <br>
                     &lt;!-- This is how a comment is written. 
                     Comments are used to make notes in your code; 
-                    which allows other coders to undertand your code as well. --&gt;
+                    which allows other coders to undertand your code as well. --&gt;<br><br>
+                    <button class="tryit" onclick="switchEditor('html')" >Try It Yourself</button>
                 </div>
                 
             </p>
@@ -109,7 +110,8 @@
             <div class="code_container">
                &lt;img src= "https://www.samplesource.jpg" alt="Sample Picture" width="200" height ="200"&gt;
                <br>
-               &lt;!-- This is a sample of how the code for the picture below is written --&gt;
+               &lt;!-- This is a sample of how the code for the picture below is written --&gt;<br><br>
+               <button class="tryit" onclick="switchEditor('html')" >Try It Yourself</button>
             </div>
 
             <!-- Inserts a figure. -->
@@ -204,6 +206,8 @@
                     <td>25</td>
                 </tr>
             </table>
+            <br>
+            <button class="tryit" onclick="switchEditor('html')" >Try It Yourself</button>
             </div>
         </div>
 
@@ -248,7 +252,8 @@
                 &lt;/ul&gt;<br>
                 &lt;ol&gt;<br>
                 &nbsp;&nbsp;&lt;li&gt; First Step &lt;/li&gt;<br>
-                &lt;/ol&gt; 
+                &lt;/ol&gt;<br><br>
+                <button class="tryit" onclick="switchEditor('html')" >Try It Yourself</button>
             </div>
 
 
@@ -258,7 +263,7 @@
                 You can nest lists inside other lists to create sub-items. Here, we used an unordered list inside another unordered list. You can also mix ordered and unordered lists if needed.
             </p>
                 
-            <div class="column-2" style="justify-content: center; gap: 90px;">
+            <div class="column-2">
                 <div class="list_container">
                     <li>Fruits
                         <ul>
@@ -297,8 +302,8 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt; Apple &lt;/li&gt;<br>
                 &nbsp;&nbsp;&lt;/ul&gt;<br>
                 
-                &lt;/ul&gt;<br>
-                
+                &lt;/ul&gt;<br><br>
+                <button class="tryit" onclick="switchEditor('html')" >Try It Yourself</button>                
             </div>
         </div>
 
@@ -516,52 +521,6 @@
                     <li>Always include a <span class="bold_italic">title</span> attribute for accessibility</li>
                     <li>Use responsive design techniques (max-width: 100%) to make iframes work on mobile devices</li>
                     <li>The <span class="bold_italic">sandbox</span> attribute can restrict iframe capabilities for security</li>
-                </ul>
-            </p>
-        </div>
-
-
-        <!-- HTML Editor/Compiler -->
-        <h2>Try It Yourself: HTML Editor</h2>
-        <div class="text">
-            <p>
-                Practice writing HTML code below. Type your HTML code in the editor and click "Run" to see the output.
-            </p>
-            
-            <div class="html-editor-container">
-                <div class="editor-header">
-                    <h3 style="margin: 0; text-align: center;">HTML Editor</h3>
-                </div>
-                
-                <div class="editor-wrapper">
-                    <div class="editor-section">
-                        <label for="html-code" class="editor-label">Write your HTML code here:</label>
-                        <textarea 
-                            id="html-code" 
-                            class="code-editor" 
-                            placeholder="Enter your HTML code here...&#10;&#10;Example:&#10;&lt;h1&gt;Hello World!&lt;/h1&gt;&#10;&lt;p&gt;This is my first HTML page.&lt;/p&gt;"
-                        ></textarea>
-                        <div class="editor-buttons">
-                            <button onclick="runCode()" class="button-run">Run Code</button>
-                            <button onclick="clearCode()" class="button-clear">Clear</button>
-                            <button onclick="loadExample()" class="button-example">Load Example</button>
-                        </div>
-                    </div>
-                    
-                    <div class="output-section">
-                        <label class="editor-label">Output:</label>
-                        <iframe id="output-frame" class="output-frame" title="HTML Output"></iframe>
-                    </div>
-                </div>
-            </div>
-            
-            <p>
-                <strong>Tips:</strong>
-                <ul>
-                    <li>Click "Run Code" to see your HTML rendered in the output area</li>
-                    <li>Click "Clear" to clear both the editor and output</li>
-                    <li>Click "Load Example" to see a sample HTML code</li>
-                    <li>You can write complete HTML documents including CSS in &lt;style&gt; tags</li>
                 </ul>
             </p>
         </div>
