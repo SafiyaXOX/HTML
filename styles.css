@@ -11,13 +11,18 @@ body {
     Generic families: serif, sans-serif, monospace, cursive, fantasy
     */
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
     background-color: white;
     color: #000000;
+    margin: 0;
+    padding: 0;
 }
 
 /* HTML Document Formating */
+
+.body{
+    margin: 20px;
+}
+
 .left-align {
     text-align: left;
 }
