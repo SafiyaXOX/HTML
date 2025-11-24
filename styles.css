@@ -439,3 +439,36 @@ td, th {
     Hover effects help users understand which elements on a page are interactive.
 */
 
+/* Home Page Elements*/
+
+.about-me-gap {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    flex-wrap: wrap;
+
+    width: 100%;
+    max-width: 1200px;  
+    margin-left: auto;  /* center the group */
+    margin-right: auto;
+    padding-bottom: 20px;
+}
+
+
+.about-me {
+    color: black;
+    font-family: "papyrus", monospace;
+    border-radius: 10px;
+    padding: 45px;
+    width: 35%;
+    background: #eef2ff;       /* your off-white color */
+    border: 3px solid #b9b0ff;
+}
+
+
+
+
+
+
+
