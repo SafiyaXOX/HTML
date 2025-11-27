@@ -5,6 +5,11 @@
     <!-- Linking the styles.css file -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Prism Theme -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <!-- Prism Line Numbers Plugin -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
@@ -73,18 +78,14 @@
                 you get to h6; h1 being the largest size.
                 <br><br> 
                 <span class="bold_italic"><i class="fa-solid fa-code"></i> Code Syntax:</span>
-                <div class="code_container">
-                    &lt;h1&gt; This is a sample heading. &lt;/h1&gt;
-                    <br>
-                    &lt;p&gt; This is a sample paragraph. &lt;/p&gt;
-                    <br>
-                    &lt;!-- This is how a comment is written. 
-                    Comments are used to make notes in your code; 
-                    which allows other coders to undertand your code as well. --&gt;<br><br>
-                    <button class="tryit" onclick="switchEditor('html')" >Try It Yourself</button>
-                </div>
                 
-            </p>
+                <pre class="line-numbers"><code class="language-html">&lt;h1&gt; This is a sample heading. &lt;/h1&gt;
+&lt;p&gt; This is a sample paragraph. &lt;/p&gt;
+&lt;!-- This is how a comment is written. 
+Comments are used to make notes in your code; 
+which allows other coders to undertand your code as well. --&gt;</code>
+
+<button class="tryit" onclick="switchEditor('html')" >Try It Yourself</button></pre>
         </div>
 
         <!-- Images and Image Captions -->
@@ -106,14 +107,11 @@
                 <span class="bold_italic"><i class="fa-solid fa-code"></i> Code Syntax:</span>
             </p>
 
-            
-            <div class="code_container">
-               &lt;img src= "https://www.samplesource.jpg" alt="Sample Picture" width="200" height ="200"&gt;
-               <br>
-               &lt;!-- This is a sample of how the code for the picture below is written --&gt;<br><br>
-               <button class="tryit" onclick="switchEditor('html')" >Try It Yourself</button>
-            </div>
+            <pre class="line-numbers"><code class="language-html">&lt;img src= "https://www.samplesource.jpg" alt="Sample Picture" width="200" height ="200"&gt;
+&lt;!-- This is a sample of how the code for the picture below is written --&gt;</code>
 
+<button class="tryit" onclick="switchEditor('html')" >Try It Yourself</button></pre>
+            
             <!-- Inserts a figure. -->
             <figure style="text-align: center; margin: 20px auto;">
                 <img src="https://cdn.britannica.com/34/235834-050-C5843610/two-different-breeds-of-cats-side-by-side-outdoors-in-the-garden.jpg" 
@@ -159,29 +157,31 @@
 
             <br>
             <span class="bold_italic"><i class="fa-solid fa-code"></i> Code Syntax:</span>
-            <div class="code_container">
-            <!-- Syntax for a small HTML table (with comments): -->
-            &lt;table&gt;<br>
-            &lt;!-- Table header row --&gt;<br>
-            &nbsp;&nbsp;&lt;tr&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Name&lt;/th&gt; &lt;!-- Header cell for Name --&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Age&lt;/th&gt;  &lt;!-- Header cell for Age --&gt;<br>
-            &nbsp;&nbsp;&lt;/tr&gt;<br>
-            &lt;!-- First data row --&gt;<br>
-            &nbsp;&nbsp;&lt;tr&gt;<br> 
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Alice&lt;/td&gt; &lt;!-- Data cell for Name --&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;22&lt;/td&gt;    &lt;!-- Data cell for Age --&gt;<br>
-            &nbsp;&nbsp;&lt;/tr&gt;<br>
-            &lt;!-- Second data row --&gt;<br>
-            &nbsp;&nbsp;&lt;tr&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Bob&lt;/td&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;25&lt;/td&gt;<br>
-            &nbsp;&nbsp;&lt;/tr&gt;
-            <br>
-            &lt;/table&gt;<br>
 
-            &lt;!-- The code above is the syntax for the table displayed below. [Minus the border format. That is CSS] --&gt;<br><br>
-            
+            <pre class="line-numbers"><code class="language-html">&lt;table&gt;
+&lt;!-- Table header row --&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Name&lt;/th&gt; &lt;!-- Header cell for Name --&gt;
+        &lt;th&gt;Age&lt;/th&gt;  &lt;!-- Header cell for Age --&gt;
+    &lt;/tr&gt;
+    &lt;!-- First data row --&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Alice&lt;/td&gt; &lt;!-- Data cell for Name --&gt;
+        &lt;td&gt;22&lt;/td&gt;    &lt;!-- Data cell for Age --&gt;
+    &lt;/tr&gt;
+    &lt;!-- Second data row --&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Bob&lt;/td&gt;
+        &lt;td&gt;25&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+    
+&lt;!-- The code above is the syntax for the table displayed below. [Minus the border format. That is CSS] --&gt;</code>
+
+<button class="tryit" onclick="switchEditor('html')" >Try It Yourself</button></pre>
+
+            <div class="code_container">
+
             <table style="border: 2px solid #fff; border-collapse: collapse;">
                 <style>
                     table[style*="border:"] td, 
@@ -206,8 +206,6 @@
                     <td>25</td>
                 </tr>
             </table>
-            <br>
-            <button class="tryit" onclick="switchEditor('html')" >Try It Yourself</button>
             </div>
         </div>
 
@@ -245,17 +243,15 @@
             </p>
             <br>
             <span class="bold_italic"><i class="fa-solid fa-code"></i> Code Syntax:</span>
-            <div class="code_container">
-                &lt;!-- Syntax for sample listings --&gt;<br>
-                &lt;ul&gt;<br>
-                &nbsp;&nbsp;&lt;li&gt; Item One &lt;/li&gt;<br>
-                &lt;/ul&gt;<br>
-                &lt;ol&gt;<br>
-                &nbsp;&nbsp;&lt;li&gt; First Step &lt;/li&gt;<br>
-                &lt;/ol&gt;<br><br>
-                <button class="tryit" onclick="switchEditor('html')" >Try It Yourself</button>
-            </div>
+            <pre class="line-numbers"><code class="language-html">&lt;!-- Syntax for sample listings --&gt;
+&lt;ul&gt;
+    &lt;li&gt; Item One &lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+    &lt;li&gt; First Step &lt;/li&gt;
+&lt;/ol&gt;</code>
 
+<button class="tryit" onclick="switchEditor('html')" >Try It Yourself</button></pre>
 
             <!-- Nested Lists -->
             <h3 style="text-align: center;">Nested Lists</h3>
@@ -293,18 +289,17 @@
                 </div>
             </div>
             <span class="bold_italic"><br><i class="fa-solid fa-code"></i>Code Syntax:</span>
-            <div class="code_container">
-                &lt;!-- Syntax for a sample nested listing --&gt;<br>
-                &lt;ul&gt;<br>
-                &nbsp;&nbsp;&lt;li&gt; Fruits &lt;/li&gt;<br>
-                &nbsp;&nbsp;&lt;ul&gt;<br>
-                
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt; Apple &lt;/li&gt;<br>
-                &nbsp;&nbsp;&lt;/ul&gt;<br>
-                
-                &lt;/ul&gt;<br><br>
-                <button class="tryit" onclick="switchEditor('html')" >Try It Yourself</button>                
-            </div>
+
+
+            <pre class="line-numbers"><code class="language-html">&lt;!-- Syntax for a sample nested listing --&gt;
+&lt;ul&gt;
+    &lt;li&gt; Fruits &lt;/li&gt;
+    &lt;ul&gt;        
+        &lt;li&gt; Apple &lt;/li&gt;
+    &lt;/ul&gt;        
+&lt;/ul&gt;</code>
+
+<button class="tryit" onclick="switchEditor('html')" >Try It Yourself</button></pre>
         </div>
 
         <!-- URLs in HTML (Linking to other web pages) -->
@@ -550,5 +545,12 @@
     -->
     
     <script src ="script.js"></script>
+
+    <!-- Prism Core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <!-- Prism JavaScript Language Support -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <!-- Line Numbers Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
 </body>
 </html>

@@ -119,3 +119,85 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// ============== JavaScript for JS Editor (Editors/js-editor.html) ==============
+
+function runJSCode() {
+    const jsCode = document.getElementById('js-code').value;
+    const outputFrame = document.getElementById('output-frame');
+    const frameDocument = outputFrame.contentDocument || outputFrame.contentWindow.document;
+
+    // Wrap the user's code to capture and display console.log output
+    // We'll override console.log and write to the frame body
+    const customConsole =
+        `
+        <script>
+            (function(){
+                var log = [];
+                var originalLog = console.log;
+                console.log = function() {
+                    var args = Array.from(arguments);
+                    log.push(args.map(function(v){
+                        try { 
+                            return typeof v === 'object' ? JSON.stringify(v) : v; 
+                        } catch(e) { 
+                            return String(v); 
+                        }
+                    }).join(' '));
+                    originalLog.apply(console, arguments);
+                }
+                try {
+                    ${jsCode}
+                } catch(err) {
+                    log.push("Error: " + err);
+                }
+                document.body.innerHTML = "<pre style='font-family:monospace; color:#222;'>" + log.join('\\n') + "</pre>";
+            })();
+        <\/script>
+        `;
+
+    // Write content to the iframe
+    frameDocument.open();
+    frameDocument.write(`<html><head></head><body></body>${customConsole}</html>`);
+    frameDocument.close();
+}
+
+// Clear JS code area and output iframe
+function clearJSCode() {
+    document.getElementById('js-code').value = '';
+    const outputFrame = document.getElementById('output-frame');
+    const frameDocument = outputFrame.contentDocument || outputFrame.contentWindow.document;
+    frameDocument.open();
+    frameDocument.write('<html><head></head><body></body></html>');
+    frameDocument.close();
+}
+
+// Load an example JS code
+function loadJSExample() {
+    const exampleCode = 
+`// Example: Simple Calculation and Output
+const name = "JavaScript Student";
+console.log("Hello, " + name + "!");
+let sum = 0;
+for (let i = 1; i <= 5; i++) {
+    sum += i;
+}
+console.log("The sum of numbers 1 to 5 is:", sum);
+console.log({purpose: "Show object output", working: true});
+`;
+    document.getElementById('js-code').value = exampleCode;
+    runJSCode();
+}
+
+// Allow running JS with Ctrl+Enter (or Cmd+Enter on Mac)
+document.addEventListener('DOMContentLoaded', function() {
+    const jsEditor = document.getElementById('js-code');
+    if (jsEditor) {
+        jsEditor.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+                e.preventDefault();
+                runJSCode();
+            }
+        });
+    }
+});
+

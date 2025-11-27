@@ -470,5 +470,78 @@ td, th {
 
 
 
+/* Code block container */
+pre[class*="language-"] {
+    background: #1a1f37 !important; /* deep indigo */
+    color: #fcf5ba !important;      /* soft yellow text */
+    border: 2px solid #fcf5ba;
+    border-radius: 12px;
+    padding: 18px 22px;
+    box-shadow: 0 6px 24px rgba(26,31,55, 0.08);
+    font-family: 'Consolas', 'Monaco', monospace;
+}
+
+/* Line numbers background */
+pre.line-numbers {
+    padding-left: 3.8em;
+}
+
+.line-numbers .line-numbers-rows {
+    border-right: 2px solid #5d10c9; /* purple separator */
+}
+
+/* Line number text */
+.line-numbers-rows > span:before {
+    color: #b9b0ff !important; /* soft lavender */
+    font-weight: bold;
+}
+
+/* ================================
+   Syntax Highlight Colors
+=================================== */
+
+/* Tags & keywords (purple) */
+.token.keyword,
+.token.tag,
+.token.selector,
+.token.punctuation {
+    color: #b9b0ff !important;
+}
+
+/* Attributes (bright yellow/gold) */
+.token.attr-name {
+    color: #e0b92c !important;
+}
+
+/* Attribute values (warm yellow) */
+.token.attr-value,
+.token.string {
+    color: #fcf5ba !important;
+}
+
+/* Comments (soft grey-blue) */
+.token.comment {
+    color: #7c88a1 !important;
+    font-style: italic;
+}
+
+/* Functions (purple-brightened) */
+.token.function {
+    color: #d5c4ff !important;
+}
+
+/* Numbers */
+.token.number {
+    color: #ffd35b !important;
+}
+
+/* Operators */
+.token.operator {
+    color: #cbbdff !important;
+}
+
+
+
+
 
 

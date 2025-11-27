@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript Editor</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<h1 style="padding: 0px; margin: 0.5px;">JavaScript Editor</h1>
+
+<div class="html-editor-container">
+    <div class="editor-flex-layout">
+        <!-- Code Input Area -->
+        <div class="editor-input-area">
+            <label for="js-code" class="editor-label">Write your JavaScript code here:</label>
+            <textarea id="js-code" class="code_container editor-textarea" spellcheck="false" placeholder="Write your JavaScript code here..."></textarea>
+            <div class="editor-button-row">
+                <button class="button_submit" onclick="runJSCode()"><i class="fa-solid fa-play"></i> Run</button>
+                <button class="button_reset" onclick="clearJSCode()"><i class="fa-solid fa-eraser"></i> Clear</button>
+                <button class="tryit" onclick="loadJSExample()"><i class="fa-regular fa-lightbulb"></i> Example</button>
+            </div>
+        </div>
+        <!-- Output Area -->
+        <div class="editor-output-area">
+            <label for="output-frame" class="editor-label">Output (console.log):</label>
+            <iframe 
+                id="output-frame"
+                class="editor-output-frame"
+                sandbox="allow-scripts allow-same-origin">
+            </iframe>
+        </div>
+    </div>
+    <div class="editor-tip">
+        <i class="fa-solid fa-info-circle"></i> <b>Tip:</b> 
+        Write JavaScript on the left and click <b>Run</b> to see your output.<br>
+        Only <b>console.log</b> output and simple browser output will appear.
+    </div>
+</div>
+
+<script src="../script.js"></script>
+</body>
+</html>

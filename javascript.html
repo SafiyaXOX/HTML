@@ -5,6 +5,12 @@
     <title>JavaScript Learning</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Prism Theme -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <!-- Prism Line Numbers Plugin -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
 </head>
 <body>
     <!-- Header -->
@@ -36,7 +42,9 @@
         <!--Intro to JS with some notes.-->
         <div class="text"> 
             <p>
-                JavaScript is used to make websites more interactive and dynamic. 
+                JavaScript is a high-level, multi-paradigm programming language primarily known for 
+                enabling interactive and dynamic content on web pages.It can update both 
+                <b><i>HTML</i></b> and <b><i>CSS</i></b>. Additionally, it can calculate, manipulate, and validate data.  
                 <br><br>
                 <span class="bold_italic">Main Purposes</span>
                 <ol>
@@ -73,10 +81,112 @@
                     </ul>
                 </ol>
             </p>
+
+            <p>
+                
+            </p>
+        </div>
+
+        <!-- JS in HTML -->
+        <h2>How to Run JavaScript Code</h2>
+        <div class="text">
+            <p>
+                JavaScript can be added within the HTML file or it can be externally linked into your 
+                file using the <span class="tags">&lt;script&gt;</span> tags.
+            </p>
+            <span class="bold_italic"><i class="fa-solid fa-code"></i>Code Syntax: </span><br>
+
+            <pre class="line-numbers"><code class="language-html">&lt;!-- This is adding script within your HTML Document --&gt;
+&lt;!DOCTYPE&gt;
+&lt;html lang ="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;script&gt;
+        console.log ("Hello World");
+        // Insert JavScript Here
+    &lt;/script&gt;
+    &lt;!-- '//' writes comments in JavaScript --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code>
+
+<button class="tryit" onclick="switchEditor('js')" >Try It Yourself</button></pre>
+           
+
+            <pre class="line-numbers"><code class="language-html">&lt;!-- This is linking external script to your HTML Document --&gt;
+&lt;!DOCTYPE&gt;
+&lt;html lang ="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;Document&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;script src ="script.js"&gt;&lt;/script&gt;
+        &lt;!-- External Link to JavaScript file script.js --&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;</code>
+
+<button class="tryit" onclick="switchEditor('js')" >Try It Yourself</button></pre>
+            <p>
+                Save and open your file in a web browser. Then, open the browser's console:
+                <ol>
+                    <li>Right-click on the blank webpage.</li>
+                    <li>Click on "Inspect" or "Inspect Element" to open the Developer Tools.</li>
+                    <li>Find and select the "Console" tab, where you should see the output of the <span class="tags">console.log</span> statement.</li>
+                </ol>
+                
+                <span class="tags">console.log ()</span> is the command that prints something to the developer console in the browser. 
+            </p>
+        </div>
+
+        <!-- Varables and Operators in JS -->
+        <h2>Variables and Operators</h2>
+        <div class="text">
+            <h3>Variables</h3>
+            <p>
+                Variables are the building blocks of any program. You can think of variables as 
+                "storage containers" for data in your code. <br><br>
+
+                You can declare variables using the <span class="tags">let</span> keyword.
+            </p>
+
+            <span class="bold_italic"><i class="fa-solid fa-code"></i> Code Syntax:</span>
+           
+            <pre class="line-numbers"><code class="language-js">let firstName = "John";
+let lastName = "Doe";
+                
+console.log (firstName);
+console.log (lastName);</code>
+                
+<button class="tryit" onclick="switchEditor('js')" >Try It Yourself</button></pre>
             
+            <span>You can also re-assign variables:</span>
+
+            
+
+            <pre class="line-numbers"><code class="language-js">let age = 11;
+console.log(age); // output 11
+
+age = 54;
+
+console.log(age); // what will be the output now?</code>
+
+<button class="tryit" onclick="switchEditor('js')" >Try It Yourself</button></pre></pre>
+            Notice the lack of <span class="tags">let</span> on line 4.
+
         </div>
     </section>
 
     <script src="script.js"></script>
+
+    <!-- Prism Core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <!-- Prism JavaScript Language Support -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <!-- Line Numbers Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
 </body>
 </html>
