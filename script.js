@@ -41,7 +41,8 @@ function switchEditor(editor) {
 // HTML Editor Functions
 
 function runCode() {
-    const htmlCode = document.getElementById('html-code').value;
+    // Get code from CodeMirror editor if available, otherwise fallback to textarea
+    const htmlCode = window.htmlEditor ? window.htmlEditor.getValue() : document.getElementById('html-code').value;
     const outputFrame = document.getElementById('output-frame');
     const outputDoc = outputFrame.contentDocument || outputFrame.contentWindow.document;
     
@@ -52,7 +53,12 @@ function runCode() {
 }
 
 function clearCode() {
-    document.getElementById('html-code').value = '';
+    // Clear CodeMirror editor if available, otherwise fallback to textarea
+    if (window.htmlEditor) {
+        window.htmlEditor.setValue('');
+    } else {
+        document.getElementById('html-code').value = '';
+    }
     const outputFrame = document.getElementById('output-frame');
     const outputDoc = outputFrame.contentDocument || outputFrame.contentWindow.document;
     outputDoc.open();
@@ -102,27 +108,45 @@ function loadExample() {
 </body>
 </html>`;
     
-    document.getElementById('html-code').value = exampleCode;
+    // Set code in CodeMirror editor if available, otherwise fallback to textarea
+    if (window.htmlEditor) {
+        window.htmlEditor.setValue(exampleCode);
+    } else {
+        document.getElementById('html-code').value = exampleCode;
+    }
     runCode();
 }
 
 // Allow running code with Ctrl+Enter (or Cmd+Enter on Mac)
 document.addEventListener('DOMContentLoaded', function() {
-    const codeEditor = document.getElementById('html-code');
-    if (codeEditor) {
-        codeEditor.addEventListener('keydown', function(e) {
-            if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
-                e.preventDefault();
+    // CodeMirror handles keyboard shortcuts internally, but we can add a custom handler
+    if (window.htmlEditor) {
+        window.htmlEditor.setOption('extraKeys', {
+            'Ctrl-Enter': function() {
+                runCode();
+            },
+            'Cmd-Enter': function() {
                 runCode();
             }
         });
+    } else {
+        const codeEditor = document.getElementById('html-code');
+        if (codeEditor) {
+            codeEditor.addEventListener('keydown', function(e) {
+                if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+                    e.preventDefault();
+                    runCode();
+                }
+            });
+        }
     }
 });
 
 // ============== JavaScript for JS Editor (Editors/js-editor.html) ==============
 
 function runJSCode() {
-    const jsCode = document.getElementById('js-code').value;
+    // Get code from CodeMirror editor if available, otherwise fallback to textarea
+    const jsCode = window.jsEditor ? window.jsEditor.getValue() : document.getElementById('js-code').value;
     const outputFrame = document.getElementById('output-frame');
     const frameDocument = outputFrame.contentDocument || outputFrame.contentWindow.document;
 
@@ -163,7 +187,12 @@ function runJSCode() {
 
 // Clear JS code area and output iframe
 function clearJSCode() {
-    document.getElementById('js-code').value = '';
+    // Clear CodeMirror editor if available, otherwise fallback to textarea
+    if (window.jsEditor) {
+        window.jsEditor.setValue('');
+    } else {
+        document.getElementById('js-code').value = '';
+    }
     const outputFrame = document.getElementById('output-frame');
     const frameDocument = outputFrame.contentDocument || outputFrame.contentWindow.document;
     frameDocument.open();
@@ -184,20 +213,37 @@ for (let i = 1; i <= 5; i++) {
 console.log("The sum of numbers 1 to 5 is:", sum);
 console.log({purpose: "Show object output", working: true});
 `;
-    document.getElementById('js-code').value = exampleCode;
+    // Set code in CodeMirror editor if available, otherwise fallback to textarea
+    if (window.jsEditor) {
+        window.jsEditor.setValue(exampleCode);
+    } else {
+        document.getElementById('js-code').value = exampleCode;
+    }
     runJSCode();
 }
 
 // Allow running JS with Ctrl+Enter (or Cmd+Enter on Mac)
 document.addEventListener('DOMContentLoaded', function() {
-    const jsEditor = document.getElementById('js-code');
-    if (jsEditor) {
-        jsEditor.addEventListener('keydown', function(e) {
-            if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
-                e.preventDefault();
+    // CodeMirror handles keyboard shortcuts internally, but we can add a custom handler
+    if (window.jsEditor) {
+        window.jsEditor.setOption('extraKeys', {
+            'Ctrl-Enter': function() {
+                runJSCode();
+            },
+            'Cmd-Enter': function() {
                 runJSCode();
             }
         });
+    } else {
+        const jsEditor = document.getElementById('js-code');
+        if (jsEditor) {
+            jsEditor.addEventListener('keydown', function(e) {
+                if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+                    e.preventDefault();
+                    runJSCode();
+                }
+            });
+        }
     }
 });
 

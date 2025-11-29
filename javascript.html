@@ -94,7 +94,6 @@
                 JavaScript can be added within the HTML file or it can be externally linked into your 
                 file using the <span class="tags">&lt;script&gt;</span> tags.
             </p>
-            <span class="bold_italic"><i class="fa-solid fa-code"></i>Code Syntax: </span><br>
 
             <pre class="line-numbers"><code class="language-html">&lt;!-- This is adding script within your HTML Document --&gt;
 &lt;!DOCTYPE&gt;
@@ -151,8 +150,6 @@
 
                 You can declare variables using the <span class="tags">let</span> keyword.
             </p>
-
-            <span class="bold_italic"><i class="fa-solid fa-code"></i> Code Syntax:</span>
            
             <pre class="line-numbers"><code class="language-js">let firstName = "John";
 let lastName = "Doe";
@@ -162,9 +159,8 @@ console.log (lastName);</code>
                 
 <button class="tryit" onclick="switchEditor('js')" >Try It Yourself</button></pre>
             
-            <span>You can also re-assign variables:</span>
+            <span>You can also re-assign variables:</span> 
 
-            
 
             <pre class="line-numbers"><code class="language-js">let age = 11;
 console.log(age); // output 11
@@ -174,8 +170,100 @@ age = 54;
 console.log(age); // what will be the output now?</code>
 
 <button class="tryit" onclick="switchEditor('js')" >Try It Yourself</button></pre></pre>
-            Notice the lack of <span class="tags">let</span> on line 4.
+            Notice the lack of <span class="tags">let</span> on line 4 - you don't need it 
+            since the variable has already been declared earlier and we are just 
+            re-assigning it here.<br><br>
+            
+            If you don't want to re-assign a variable, we can give it the 
+            <span class="tags">const</span> keyword.
 
+            <pre class="line-numbers"><code class="language-js">const pi = 3.14;
+pi = 10;
+
+console.log (pi); // What will be the output?</code>
+
+<button class="tryit" onclick="switchEditor('js')" >Try It Yourself</button></pre>
+
+
+            You may think that the output will be <span class="tags">3.14</span>, however, 
+            an error will be thrown instead.<br><br>
+
+            Errors are incredibly helpfful at telling us what is wrong with out code, 
+            and exactly where the issue is. Without it, it would be frustrating to try to 
+            find what is wrong.<br><br>
+
+            Summary: 
+
+            <ul>
+                <li><span class="tags">let</span>, which can be re-assigned.</li>
+                <li><span class="tags">const</span>, which can't be re-assigned and will throw an error if you try.</li>
+            </ul>
+
+            There is a third way, <span class="tags">var</span>, which was the original way 
+            that variables were declared in JavaScript. <span class="tags">Var</span> is similar to <span class="tags">let</span>;
+            in that variables assigned 
+            this way can be reassigned, but it has other quirks that were cleared up 
+            when the language introduced <span class="tags">let</span> and <span class="tags">const</span>.
+            By and large, it is not used anymore.<br><br> 
+            However, you will likely come across code which uses <span class="tags">var</span> at some point, so it is useful to know 
+            that it exists. 
+
+            <h3>Numbers</h3>
+            <p>
+                Numbers are the building blocks of programming logic. It is hard to think of any useful
+                programming tasks that doesn't involve at least a little basic math, so knowing how numbers work is obviously quite 
+                important.<br><br> 
+
+                JavaScript follows the standard mathematical <b><i>Order of Operations</i></b> (often remembered by acronyms like 
+                <b><i>PEMDAS</i></b> or <b><i>BODMAS</i></b>). This means:
+
+                <ol>
+                    <li><b>Parentheses</b> (or Brackets) are evaluated first.</li>
+                    <li><b>Multiplication</b> and <b>Division</b> are done next, from left to right.</li>
+                    <li><b>Addition</b> and <b>Subtraction</b> are done last, from left to right.</li>
+                </ol>
+            </p>
+
+            <h3>Assignment</h3>
+
+            <p>
+                Try the following exercies by adding code to a script tag in your HTML file:
+                
+                <ol>
+                    <li>Add 2 number together. In your script, type in <span class="tags">console.log (23 + 97)</span>. Running this 
+                        should log <span class="tags">120</span>.</li>
+                    <li>Do the same thing but add 6 different numbers togethher.</li>
+                    <li>Now log the value of the following expression: <span class="tags">(4 + 6 + 9) / 77</span>. 
+                    The console should log approximately <span class="tags">0.24675</span>.</li>        
+                    <li>
+                        Lets use some variables:
+                        <ol>
+                            <li>Add this statement to the script tag: <span class="tags">let a = 10</span>.</li>
+                            <li>Below it, add <span class="tags">console.log (a)</span>. When you run this, the browser console should log 
+                            <code>10</code>.</li>
+                            <li>Afterwards, re-assign <span class="tags">a</span> with a different number value. Log <span class="tags">a</span>
+                            again afterwards and it shhould show the updated value (the previous log should still show the old value of <span class="tags">10</span>
+                            since that was before <span class="tags">a</span> was reassigned.)</li>
+                            <li>Now add to the bottom of the script <span class="tags">let b = 7 * a</span>.</li>
+                            <li>Log what <span class="tags">b</span> is. It should log the result of 7 multiplied by whatever was reassigned 
+                            <span class="tags">a</span> with.</li>
+                        </ol>
+                    </li>
+                    <li>Try this sequence:
+                        <ol>
+                            <li>Declare a const variable <span class="tags">max</span> with the value <span class="tags">57</span>.</li>
+                            <li>Declare another const vaiable <span class="tags">actual</span> and assign it <span class="tags">max - 13</span>.</li>
+                            <li>Declare another const variable <span class="tags">percentage</span> and assign it <span class="tags">actual / max</span>.</li>
+                            <li>Now if you log <span class="tags">percentage</span>, you should see a value in the console like <span class="tags">0.7719</span>.</li>
+                        </ol>
+                    </li>
+                    <li> Take a few minutes to keep playing around with various things in your script tag. Ensure that you're comfortable with it before moving on.</li>
+                </ol>
+            
+            
+            </p>
+
+            
         </div>
     </section>
 

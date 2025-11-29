@@ -47,6 +47,7 @@ td, th {
     padding: 8px;
 }
 
+
 /* HTML Document Formating */
 
 .body{
@@ -266,10 +267,45 @@ td, th {
     min-height: 65vh;
     height: 100%;
     width: 100%;
-    font-size: 1.05rem;
+    font-size: 0.9rem;
     resize: vertical;
     box-sizing: border-box;
     margin-bottom: 10px; /* reduced margin-bottom */
+    padding: 15px;
+    background-color: #1a1f37;
+    color: #fceabb;
+    border: 2px solid #e0e7ff;
+    border-radius: 10px;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    box-shadow: 0 4px 18px rgba(93,16,201,0.06);
+    transition: all 0.2s ease;
+}
+
+.editor-textarea:focus {
+    outline: none;
+    border-color: #5d10c9;
+    box-shadow: 0 4px 18px rgba(93,16,201,0.17);
+}
+
+.editor-textarea::placeholder {
+    color: #7c88a1;
+    opacity: 0.7;
+}
+
+/* CodeMirror Editor Styling - same size as output frame */
+.CodeMirror {
+    min-height: 65vh;
+    height: 100%;
+    width: 100%;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+    margin-bottom: 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.CodeMirror-scroll {
+    min-height: 65vh;
 }
 
 .editor-button-row {
@@ -295,7 +331,7 @@ td, th {
     border: 2px solid #e0e7ff;
     border-radius: 10px;
     width: 100%;
-    margin-top: 1px; /* reduced margin-top */
+    margin-top: 0;
     box-shadow: 0 4px 18px rgba(93,16,201,0.06);
     transition: box-shadow 0.15s;
 }
@@ -465,9 +501,6 @@ td, th {
     background: #eef2ff;       /* your off-white color */
     border: 3px solid #b9b0ff;
 }
-
-
-
 
 
 /* Code block container */

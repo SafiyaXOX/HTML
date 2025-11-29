@@ -5,6 +5,9 @@
     <title>Javascript Editor</title>
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- CodeMirror CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
 </head>
 <body>
 <h1 style="padding: 0px; margin: 0.5px;">JavaScript Editor</h1>
@@ -14,7 +17,7 @@
         <!-- Code Input Area -->
         <div class="editor-input-area">
             <label for="js-code" class="editor-label">Write your JavaScript code here:</label>
-            <textarea id="js-code" class="code_container editor-textarea" spellcheck="false" placeholder="Write your JavaScript code here..."></textarea>
+            <textarea id="js-code" class="lang-javascript" spellcheck="false" placeholder="Write your JavaScript code here..."></textarea>
             <div class="editor-button-row">
                 <button class="button_submit" onclick="runJSCode()"><i class="fa-solid fa-play"></i> Run</button>
                 <button class="button_reset" onclick="clearJSCode()"><i class="fa-solid fa-eraser"></i> Clear</button>
@@ -38,6 +41,26 @@
     </div>
 </div>
 
+<!-- CodeMirror JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/javascript/javascript.min.js"></script>
+
 <script src="../script.js"></script>
+<script>
+    // Initialize CodeMirror for JavaScript editor
+    const jsEditor = CodeMirror.fromTextArea(document.getElementById('js-code'), {
+        mode: 'javascript',
+        theme: 'default', // Custom purple theme applied via CSS
+        lineNumbers: true,
+        lineWrapping: true,
+        indentUnit: 2,
+        indentWithTabs: false,
+        tabSize: 2,
+        autofocus: true
+    });
+    
+    // Store editor instance globally for script.js functions
+    window.jsEditor = jsEditor;
+</script>
 </body>
 </html>

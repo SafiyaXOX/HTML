@@ -5,6 +5,9 @@
     <title>HTML Editor</title>
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- CodeMirror CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
 </head>
 
 <body>
@@ -15,7 +18,7 @@
             <!-- Code Input Area -->
             <div class="editor-input-area">
                 <label for="html-code" class="editor-label">Write your HTML code here:</label>
-                <textarea id="html-code" class="code_container editor-textarea" spellcheck="false" placeholder="Write your HTML code here..."></textarea>
+                <textarea id="html-code" class="language-html editor-textarea" spellcheck="false" placeholder="Write your HTML code here..."></textarea>
                 <div class="editor-button-row">
                     <button class="button_submit" onclick="runCode()"><i class="fa-solid fa-play"></i> Run</button>
                     <button class="button_reset" onclick="clearCode()"><i class="fa-solid fa-eraser"></i> Clear</button>
@@ -39,7 +42,30 @@
         </div>
     </div>
 
-<script src="../script.js"></script>
+    <!-- CodeMirror JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/javascript/javascript.min.js"></script>
+    
+    <script src="../script.js"></script>
+    <script>
+        // Initialize CodeMirror for HTML editor
+        const htmlEditor = CodeMirror.fromTextArea(document.getElementById('html-code'), {
+            mode: 'htmlmixed',
+            theme: 'default',
+            lineNumbers: true,
+            lineWrapping: true,
+            indentUnit: 2,
+            indentWithTabs: false,
+            tabSize: 2,
+            autofocus: true
+        });
+        
+        // Store editor instance globally for script.js functions
+        window.htmlEditor = htmlEditor;
+    </script>
 </body>
 </html>
 
